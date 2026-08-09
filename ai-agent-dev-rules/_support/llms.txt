@@ -1,0 +1,15 @@
+# AI Agent Development Rules
+
+> Codex-first, agent-neutral coding standards with progressive task-scoped loading from one canonical GitHub repository.
+
+## Primary
+
+- [Rule router](../../ai-agent-dev-rules.md): Start here in a local clone and load only the pages selected for the current repository and task.
+- [Canonical repository](https://github.com/sokrates1989/coding-guidelines): Version history, releases, and human-rendered Markdown.
+
+Only tracked rule pages in the canonical repository are normative. GitHub-rendered pages and support artifacts are non-normative representations.
+
+## Support
+
+- The rules manifest is distributed as `ai-agent-dev-rules/_support/rules-manifest.json`.
+- Agent adapters should point to the installed local rule router rather than duplicate the full ruleset.

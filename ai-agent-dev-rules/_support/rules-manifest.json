@@ -1,0 +1,525 @@
+{
+    "rulesetVersion":  "2.0.0",
+    "updated":  "2026-08-09",
+    "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
+    "rootFile":  "ai-agent-dev-rules.md",
+    "pages":  [
+                  {
+                      "id":  "ROOT-ROUTER",
+                      "title":  "AI Agent Development Rules",
+                      "file":  "ai-agent-dev-rules.md",
+                      "type":  "root-router",
+                      "requires":  [
+
+                                   ],
+                      "loadWhen":  [
+                                       "Always load first."
+                                   ],
+                      "estimatedWords":  848
+                  },
+                  {
+                      "id":  "CORE-OPERATING-CONTRACT",
+                      "title":  "Core Operating Contract",
+                      "file":  "ai-agent-dev-rules/core/operating-contract.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "ROOT-ROUTER"
+                                   ],
+                      "loadWhen":  [
+                                       "Every governed task."
+                                   ],
+                      "estimatedWords":  391
+                  },
+                  {
+                      "id":  "CORE-REPOSITORY-DISCOVERY",
+                      "title":  "Repository Discovery and Rule Selection",
+                      "file":  "ai-agent-dev-rules/core/repository-discovery.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "ROOT-ROUTER",
+                                       "CORE-OPERATING-CONTRACT"
+                                   ],
+                      "loadWhen":  [
+                                       "Inside a Git repository.",
+                                       "Repository-specific pages may apply."
+                                   ],
+                      "estimatedWords":  330
+                  },
+                  {
+                      "id":  "CORE-CHANGE-SAFETY",
+                      "title":  "Change Safety and Scope",
+                      "file":  "ai-agent-dev-rules/core/change-safety-and-scope.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "ROOT-ROUTER",
+                                       "CORE-OPERATING-CONTRACT"
+                                   ],
+                      "loadWhen":  [
+                                       "Any edit or side-effecting command."
+                                   ],
+                      "estimatedWords":  384
+                  },
+                  {
+                      "id":  "CORE-VALIDATION-COMPLETION",
+                      "title":  "Validation and Completion",
+                      "file":  "ai-agent-dev-rules/core/validation-and-completion.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "ROOT-ROUTER",
+                                       "CORE-OPERATING-CONTRACT"
+                                   ],
+                      "loadWhen":  [
+                                       "Every completed change or review."
+                                   ],
+                      "estimatedWords":  383
+                  },
+                  {
+                      "id":  "DOC-COMMENTS-DOCSTRINGS",
+                      "title":  "Comments and Docstrings",
+                      "file":  "ai-agent-dev-rules/documentation/comments-and-docstrings.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-CHANGE-SAFETY"
+                                   ],
+                      "loadWhen":  [
+                                       "Comments, docstrings, or documentation requirements are planned, changed, reviewed, or diagnosed.",
+                                       "Named declarations or logical groups are added, changed, or reviewed."
+                                   ],
+                      "estimatedWords":  654
+                  },
+                  {
+                      "id":  "DOC-COMMENTS-EXAMPLES",
+                      "title":  "Comments and Docstrings Examples",
+                      "file":  "ai-agent-dev-rules/documentation/comments-and-docstrings/examples.md",
+                      "type":  "examples",
+                      "requires":  [
+                                       "DOC-COMMENTS-DOCSTRINGS"
+                                   ],
+                      "loadWhen":  [
+                                       "Documentation format is unclear.",
+                                       "No nearby valid example exists."
+                                   ],
+                      "estimatedWords":  305
+                  },
+                  {
+                      "id":  "DOC-REPOSITORY-DOCUMENTATION",
+                      "title":  "Repository Documentation",
+                      "file":  "ai-agent-dev-rules/documentation/repository-documentation.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-VALIDATION-COMPLETION"
+                                   ],
+                      "loadWhen":  [
+                                       "Repository-level documentation is planned, changed, reviewed, or diagnosed.",
+                                       "Public behavior or workflow changes require documentation."
+                                   ],
+                      "estimatedWords":  252
+                  },
+                  {
+                      "id":  "QUALITY-STRUCTURE-REFACTORING",
+                      "title":  "Structure and Refactoring",
+                      "file":  "ai-agent-dev-rules/code-quality/structure-and-refactoring.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-CHANGE-SAFETY",
+                                       "DOC-COMMENTS-DOCSTRINGS"
+                                   ],
+                      "loadWhen":  [
+                                       "File/function thresholds are approached.",
+                                       "Extraction or modularization is planned.",
+                                       "Refactoring task."
+                                   ],
+                      "estimatedWords":  385
+                  },
+                  {
+                      "id":  "QUALITY-TESTING",
+                      "title":  "Testing",
+                      "file":  "ai-agent-dev-rules/code-quality/testing.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-VALIDATION-COMPLETION",
+                                       "CORE-CHANGE-SAFETY"
+                                   ],
+                      "loadWhen":  [
+                                       "Any behavior change.",
+                                       "Bug fix.",
+                                       "Refactor.",
+                                       "Test-related task."
+                                   ],
+                      "estimatedWords":  255
+                  },
+                  {
+                      "id":  "QUALITY-DEPENDENCIES-COMPATIBILITY",
+                      "title":  "Dependencies and Compatibility",
+                      "file":  "ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-CHANGE-SAFETY",
+                                       "CORE-VALIDATION-COMPLETION"
+                                   ],
+                      "loadWhen":  [
+                                       "Manifest or lock file changes.",
+                                       "New dependency.",
+                                       "Public interface or persisted format changes."
+                                   ],
+                      "estimatedWords":  233
+                  },
+                  {
+                      "id":  "LANG-PYTHON",
+                      "title":  "Python Development Rules",
+                      "file":  "ai-agent-dev-rules/languages/python.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "DOC-COMMENTS-DOCSTRINGS"
+                                   ],
+                      "loadWhen":  [
+                                       "Planned or reviewed files include Python or Python project configuration."
+                                   ],
+                      "estimatedWords":  257
+                  },
+                  {
+                      "id":  "LANG-JAVASCRIPT-TYPESCRIPT",
+                      "title":  "JavaScript and TypeScript Development Rules",
+                      "file":  "ai-agent-dev-rules/languages/javascript-typescript.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "DOC-COMMENTS-DOCSTRINGS"
+                                   ],
+                      "loadWhen":  [
+                                       "Planned or reviewed files include JavaScript or TypeScript."
+                                   ],
+                      "estimatedWords":  313
+                  },
+                  {
+                      "id":  "FRAMEWORK-REACT",
+                      "title":  "React Development Rules",
+                      "file":  "ai-agent-dev-rules/languages/react.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "LANG-JAVASCRIPT-TYPESCRIPT",
+                                       "DOC-COMMENTS-DOCSTRINGS",
+                                       "QUALITY-STRUCTURE-REFACTORING"
+                                   ],
+                      "loadWhen":  [
+                                       "Planned or reviewed files include React components, hooks, or JSX/TSX."
+                                   ],
+                      "estimatedWords":  299
+                  },
+                  {
+                      "id":  "LANG-BASH",
+                      "title":  "Bash Development Rules",
+                      "file":  "ai-agent-dev-rules/languages/bash.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "DOC-COMMENTS-DOCSTRINGS"
+                                   ],
+                      "loadWhen":  [
+                                       "Planned or reviewed files include `.sh` scripts or Bash workflow code."
+                                   ],
+                      "estimatedWords":  282
+                  },
+                  {
+                      "id":  "LANG-POWERSHELL",
+                      "title":  "PowerShell Development Rules",
+                      "file":  "ai-agent-dev-rules/languages/powershell.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "DOC-COMMENTS-DOCSTRINGS"
+                                   ],
+                      "loadWhen":  [
+                                       "Planned or reviewed files include `.ps1` or `.psm1` code."
+                                   ],
+                      "estimatedWords":  263
+                  },
+                  {
+                      "id":  "LANG-DART-FLUTTER",
+                      "title":  "Dart and Flutter Development Rules",
+                      "file":  "ai-agent-dev-rules/languages/dart-flutter.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "DOC-COMMENTS-DOCSTRINGS"
+                                   ],
+                      "loadWhen":  [
+                                       "Planned or reviewed files include Dart, Flutter, `pubspec.yaml`, or Flutter platform configuration."
+                                   ],
+                      "estimatedWords":  304
+                  },
+                  {
+                      "id":  "REPO-TYPE-BASH-CLI",
+                      "title":  "Bash CLI Tool Repository Rules",
+                      "file":  "ai-agent-dev-rules/repository-types/bash-cli-tools.md",
+                      "type":  "secondary-router",
+                      "requires":  [
+                                       "LANG-BASH",
+                                       "CORE-CHANGE-SAFETY",
+                                       "CORE-VALIDATION-COMPLETION"
+                                   ],
+                      "loadWhen":  [
+                                       "Installable stateful Bash CLI architecture is detected."
+                                   ],
+                      "estimatedWords":  214
+                  },
+                  {
+                      "id":  "BASH-CLI-ARCHITECTURE",
+                      "title":  "Bash CLI Architecture",
+                      "file":  "ai-agent-dev-rules/repository-types/bash-cli-tools/architecture.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-BASH-CLI"
+                                   ],
+                      "loadWhen":  [
+                                       "Bash CLI structure or dispatcher changes."
+                                   ],
+                      "estimatedWords":  326
+                  },
+                  {
+                      "id":  "BASH-CLI-VERSIONING",
+                      "title":  "Bash CLI Versioning",
+                      "file":  "ai-agent-dev-rules/repository-types/bash-cli-tools/versioning.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-BASH-CLI",
+                                       "QUALITY-DEPENDENCIES-COMPATIBILITY"
+                                   ],
+                      "loadWhen":  [
+                                       "`VERSION` or displayed version changes."
+                                   ],
+                      "estimatedWords":  286
+                  },
+                  {
+                      "id":  "BASH-CLI-HELP-MAN",
+                      "title":  "Bash CLI Help and Man Pages",
+                      "file":  "ai-agent-dev-rules/repository-types/bash-cli-tools/help-and-man-pages.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-BASH-CLI",
+                                       "BASH-CLI-VERSIONING",
+                                       "DOC-REPOSITORY-DOCUMENTATION"
+                                   ],
+                      "loadWhen":  [
+                                       "CLI help or man page changes."
+                                   ],
+                      "estimatedWords":  299
+                  },
+                  {
+                      "id":  "BASH-CLI-LIFECYCLE",
+                      "title":  "Bash CLI Install, Update, Reset, and Uninstall",
+                      "file":  "ai-agent-dev-rules/repository-types/bash-cli-tools/install-update-reset.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-BASH-CLI",
+                                       "CORE-CHANGE-SAFETY"
+                                   ],
+                      "loadWhen":  [
+                                       "Installer, updater, reset, setup state, or uninstaller changes."
+                                   ],
+                      "estimatedWords":  310
+                  },
+                  {
+                      "id":  "BASH-CLI-AUTO-UPDATE",
+                      "title":  "Bash CLI Auto-Update Guard",
+                      "file":  "ai-agent-dev-rules/repository-types/bash-cli-tools/auto-update.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-BASH-CLI",
+                                       "BASH-CLI-LIFECYCLE"
+                                   ],
+                      "loadWhen":  [
+                                       "Automatic update guard changes."
+                                   ],
+                      "estimatedWords":  399
+                  },
+                  {
+                      "id":  "BASH-CLI-TESTING",
+                      "title":  "Bash CLI Tool Testing",
+                      "file":  "ai-agent-dev-rules/repository-types/bash-cli-tools/testing.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-BASH-CLI",
+                                       "QUALITY-TESTING"
+                                   ],
+                      "loadWhen":  [
+                                       "Bash CLI validation is planned, performed, reviewed, or diagnosed."
+                                   ],
+                      "estimatedWords":  212
+                  },
+                  {
+                      "id":  "REPO-TYPE-DOCKER-SWARM",
+                      "title":  "Docker Swarm Repository Rules",
+                      "file":  "ai-agent-dev-rules/repository-types/docker-swarm.md",
+                      "type":  "secondary-router",
+                      "requires":  [
+                                       "CORE-CHANGE-SAFETY",
+                                       "CORE-VALIDATION-COMPLETION"
+                                   ],
+                      "loadWhen":  [
+                                       "Docker Swarm or Traefik work is planned, changed, reviewed, or diagnosed."
+                                   ],
+                      "estimatedWords":  126
+                  },
+                  {
+                      "id":  "SWARM-ROUTING-TRAEFIK",
+                      "title":  "Docker Swarm Routing and Traefik",
+                      "file":  "ai-agent-dev-rules/repository-types/docker-swarm/routing-and-traefik.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-DOCKER-SWARM"
+                                   ],
+                      "loadWhen":  [
+                                       "Traefik, API paths, or reverse-proxy routing changes."
+                                   ],
+                      "estimatedWords":  341
+                  },
+                  {
+                      "id":  "SWARM-STACK-STRUCTURE",
+                      "title":  "Docker Swarm Stack Structure",
+                      "file":  "ai-agent-dev-rules/repository-types/docker-swarm/stack-structure.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-DOCKER-SWARM"
+                                   ],
+                      "loadWhen":  [
+                                       "Swarm stack structure or deployment manifest changes."
+                                   ],
+                      "estimatedWords":  318
+                  },
+                  {
+                      "id":  "SWARM-SECRETS-DEPLOYMENT",
+                      "title":  "Docker Swarm Secrets and Deployment",
+                      "file":  "ai-agent-dev-rules/repository-types/docker-swarm/secrets-and-deployment.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "REPO-TYPE-DOCKER-SWARM",
+                                       "SWARM-STACK-STRUCTURE",
+                                       "CORE-CHANGE-SAFETY"
+                                   ],
+                      "loadWhen":  [
+                                       "Secrets, image publication, deployment, rollback, or production operations."
+                                   ],
+                      "estimatedWords":  286
+                  },
+                  {
+                      "id":  "REPO-TYPE-WRAPPER",
+                      "title":  "Wrapper Repository Rules",
+                      "file":  "ai-agent-dev-rules/repository-types/wrapper-repositories.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-CHANGE-SAFETY",
+                                       "CORE-REPOSITORY-DISCOVERY"
+                                   ],
+                      "loadWhen":  [
+                                       "Wrapper, upstream, generated site, override, injection, or submodule work."
+                                   ],
+                      "estimatedWords":  263
+                  },
+                  {
+                      "id":  "REPO-TYPE-TEMPLATE",
+                      "title":  "Template and Generator Repository Rules",
+                      "file":  "ai-agent-dev-rules/repository-types/template-repositories.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-CHANGE-SAFETY",
+                                       "QUALITY-TESTING",
+                                       "QUALITY-DEPENDENCIES-COMPATIBILITY"
+                                   ],
+                      "loadWhen":  [
+                                       "Template, generator, blueprint, recipe, golden output, or ownership changes."
+                                   ],
+                      "estimatedWords":  258
+                  },
+                  {
+                      "id":  "WORKFLOW-GIT-COMMITS",
+                      "title":  "Git Commit Message Rules",
+                      "file":  "ai-agent-dev-rules/workflows/git-commit-messages.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-VALIDATION-COMPLETION"
+                                   ],
+                      "loadWhen":  [
+                                       "Commit message or commit command requested."
+                                   ],
+                      "estimatedWords":  500
+                  },
+                  {
+                      "id":  "WORKFLOW-CI-CD",
+                      "title":  "CI/CD Workflow Rules",
+                      "file":  "ai-agent-dev-rules/workflows/ci-cd.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-CHANGE-SAFETY",
+                                       "CORE-VALIDATION-COMPLETION"
+                                   ],
+                      "loadWhen":  [
+                                       "CI/CD or automation workflow work is planned, changed, reviewed, or diagnosed."
+                                   ],
+                      "estimatedWords":  214
+                  },
+                  {
+                      "id":  "WORKFLOW-DATABASE-MIGRATIONS",
+                      "title":  "Database Migration Rules",
+                      "file":  "ai-agent-dev-rules/workflows/database-migrations.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-CHANGE-SAFETY",
+                                       "QUALITY-TESTING",
+                                       "QUALITY-DEPENDENCIES-COMPATIBILITY"
+                                   ],
+                      "loadWhen":  [
+                                       "Schema or persisted data migration work is planned, changed, reviewed, or diagnosed."
+                                   ],
+                      "estimatedWords":  198
+                  },
+                  {
+                      "id":  "REPO-FIGMA-WEBSITE",
+                      "title":  "Repository Rules: figma-website",
+                      "file":  "ai-agent-dev-rules/repositories/figma-website.md",
+                      "type":  "repository",
+                      "requires":  [
+                                       "REPO-TYPE-WRAPPER",
+                                       "CORE-REPOSITORY-DISCOVERY"
+                                   ],
+                      "loadWhen":  [
+                                       "Exact remote match for figma-website."
+                                   ],
+                      "estimatedWords":  401
+                  },
+                  {
+                      "id":  "REPO-PYTHON-API-TEMPLATE",
+                      "title":  "Repository Rules: python-api-template",
+                      "file":  "ai-agent-dev-rules/repositories/python-api-template.md",
+                      "type":  "repository",
+                      "requires":  [
+                                       "REPO-TYPE-TEMPLATE",
+                                       "CORE-REPOSITORY-DISCOVERY"
+                                   ],
+                      "loadWhen":  [
+                                       "Exact remote match for python-api-template."
+                                   ],
+                      "estimatedWords":  403
+                  },
+                  {
+                      "id":  "REPO-FLUTTER-APP-TEMPLATE",
+                      "title":  "Repository Rules: flutter_app_template",
+                      "file":  "ai-agent-dev-rules/repositories/flutter-app-template.md",
+                      "type":  "repository",
+                      "requires":  [
+                                       "REPO-TYPE-TEMPLATE",
+                                       "CORE-REPOSITORY-DISCOVERY"
+                                   ],
+                      "loadWhen":  [
+                                       "Exact remote match for flutter_app_template."
+                                   ],
+                      "estimatedWords":  372
+                  }
+              ]
+}
