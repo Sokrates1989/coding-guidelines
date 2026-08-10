@@ -33,7 +33,7 @@ This support document maps the two previous monolithic documents to the new page
 | Tool applicability | `repository-types/bash-cli-tools.md` | Narrowed to installable, stateful, Bash-first CLI repositories. |
 | Architecture layers | `repository-types/bash-cli-tools/architecture.md` | Preserved with repository-specific optional layers. |
 | Generic Bash style | `languages/bash.md` | Separated from CLI architecture. |
-| `VERSION` and semver | `repository-types/bash-cli-tools/versioning.md` | Corrected examples and clarified the normal final newline. |
+| `VERSION` and semver | `workflows/semantic-versioning.md`, `repository-types/bash-cli-tools/versioning.md` | General SemVer decisions are centralized; Bash-specific storage and display rules retain the root `VERSION` convention. |
 | Help and man pages | `repository-types/bash-cli-tools/help-and-man-pages.md` | Resolved the distinction between mandatory `man <tool>` and optional `<tool> man`. |
 | Automatic update guard | `repository-types/bash-cli-tools/auto-update.md` | Corrected to distinguish equal, behind, ahead, diverged, detached, dirty, offline, and non-interactive states. |
 | Reset, install, update, uninstall | `repository-types/bash-cli-tools/install-update-reset.md` | Reset now applies only to tools with persisted state and cannot silently purge remote data. |

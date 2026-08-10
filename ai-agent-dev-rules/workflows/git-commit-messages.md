@@ -5,7 +5,7 @@
 **Applies when:** A task may change files in a Git worktree, or the user asks for a commit message, commit command, staged-change review, or actual commit.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
-**Ruleset version:** `2.3.0`.  
+**Ruleset version:** `2.4.0`.  
 **Updated:** `2026-08-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
@@ -50,7 +50,7 @@ Include metadata only when verified:
 - Version only: `[VERSION | Category]`.
 - Both: `[VERSION | JIRA-ID | Category]`.
 
-Never invent a version or Jira ID. A staged repository `VERSION` file MAY supply the version only when an applicable repository rule defines that behavior and the new value was read.
+Never invent a version or Jira ID. When version metadata is requested or present, first load the [semantic-versioning rule](semantic-versioning.md). A staged authoritative version source MAY supply the version only when an applicable repository rule defines that behavior and the staged value was read. The commit message MUST match that value; it MUST NOT independently increment or calculate a version, and creating a commit alone MUST NOT trigger a bump.
 
 Choose one primary category. Examples include `BugFix`, `New Feature`, `Refactoring`, `Documentation`, `Tests`, `Security`, `Performance`, `Setup`, `Env`, `Build`, `CI`, `Infra`, `UI`, `Navigation`, `Translation`, `Tooling`, and `CodeVersion`.
 

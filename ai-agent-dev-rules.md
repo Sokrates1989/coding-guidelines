@@ -5,7 +5,7 @@
 **Applies when:** Every AI-assisted software task that may inspect, create, modify, refactor, test, document, commit, build, publish, deploy, or review repository content.  
 **Required pages:** None.  
 **Overrides:** None.  
-**Ruleset version:** `2.3.0`.  
+**Ruleset version:** `2.4.0`.  
 **Updated:** `2026-08-10`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 
@@ -17,13 +17,13 @@ This page is the canonical rule router for AI coding agents. It deliberately con
 
 ## In-run rule retention
 
-Within one continuous agent run, already-read rule pages remain active while their content, Rule IDs, and ruleset version are reliably available in context. A new operator message alone is not a reload trigger.
+Within one agent run, already-read pages remain active while their content, Rule IDs, and ruleset version remain reliably available. A new operator message alone does not trigger reloading.
 
-- At the start of a new run, load the root and selected pages normally.
-- On each follow-up, re-evaluate the planned scope and load only newly applicable pages and their required dependencies. MUST NOT reread unchanged pages solely because another message arrived.
-- Reload the root and applicable pages when the operator says the rules changed or requests a refresh, the checked-out rules revision changed, context compaction or handoff no longer preserves required content, or the agent cannot reliably identify the loaded version or requirements.
-- Compaction does not require a reload when the retained context still preserves every applicable instruction and the loaded Rule IDs and version. When uncertain, reload before modifying files.
-- Strict adherence takes priority over avoiding a repeated read.
+- Start a new run by loading the root and selected pages.
+- On follow-ups, re-evaluate scope and load only newly applicable pages and dependencies. MUST NOT reread unchanged pages merely because a message arrived.
+- Reload when the operator says the rules changed or requests a refresh, the checked-out revision changes, compaction or handoff loses required content, or the loaded version or requirements are uncertain.
+- Compaction alone does not require reloading if retained context preserves every applicable instruction, Rule ID, and version. When uncertain, reload before editing.
+- Strict adherence takes priority over avoiding rereads.
 
 ## Normative vocabulary
 
@@ -83,6 +83,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | Large functions/files, extraction, modularization, or structural refactoring | [Structure and refactoring](ai-agent-dev-rules/code-quality/structure-and-refactoring.md). |
 | Tests, regressions, verification, or refactoring | [Testing](ai-agent-dev-rules/code-quality/testing.md). |
 | Dependencies, lock files, public interfaces, or compatibility | [Dependencies and compatibility](ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md). |
+| Version numbers, release identity, artifact names, tags, or commit-version metadata | [Semantic versioning](ai-agent-dev-rules/workflows/semantic-versioning.md). |
 | Python | [Python](ai-agent-dev-rules/languages/python.md). |
 | JavaScript or TypeScript | [JavaScript and TypeScript](ai-agent-dev-rules/languages/javascript-typescript.md). |
 | React components or hooks | [React](ai-agent-dev-rules/languages/react.md) and JavaScript/TypeScript. |

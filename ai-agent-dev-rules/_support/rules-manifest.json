@@ -1,5 +1,5 @@
 {
-    "rulesetVersion":  "2.3.0",
+    "rulesetVersion":  "2.4.0",
     "updated":  "2026-08-10",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1093
+                      "estimatedWords":  1076
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -304,12 +304,12 @@
                       "type":  "normative",
                       "requires":  [
                                        "REPO-TYPE-BASH-CLI",
-                                       "QUALITY-DEPENDENCIES-COMPATIBILITY"
+                                       "WORKFLOW-SEMANTIC-VERSIONING"
                                    ],
                       "loadWhen":  [
                                        "`VERSION` or displayed version changes."
                                    ],
-                      "estimatedWords":  286
+                      "estimatedWords":  279
                   },
                   {
                       "id":  "BASH-CLI-HELP-MAN",
@@ -453,6 +453,22 @@
                       "estimatedWords":  258
                   },
                   {
+                      "id":  "WORKFLOW-SEMANTIC-VERSIONING",
+                      "title":  "Semantic Versioning",
+                      "file":  "ai-agent-dev-rules/workflows/semantic-versioning.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-CHANGE-SAFETY",
+                                       "CORE-VALIDATION-COMPLETION",
+                                       "QUALITY-DEPENDENCIES-COMPATIBILITY"
+                                   ],
+                      "loadWhen":  [
+                                       "A tool, application, package, release, installer, artifact, tag, or commit-message version is selected, changed, reviewed, or reported."
+                                   ],
+                      "estimatedWords":  812
+                  },
+                  {
                       "id":  "WORKFLOW-GIT-COMMITS",
                       "title":  "Git Commit Workflow Rules",
                       "file":  "ai-agent-dev-rules/workflows/git-commit-messages.md",
@@ -466,7 +482,7 @@
                                        "Any task may change files in a Git worktree.",
                                        "Commit message, commit command, or staged-change review requested."
                                    ],
-                      "estimatedWords":  845
+                      "estimatedWords":  885
                   },
                   {
                       "id":  "WORKFLOW-CI-CD",

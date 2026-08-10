@@ -3,10 +3,10 @@
 **Rule ID:** `BASH-CLI-VERSIONING`  
 **Status:** Active.  
 **Applies when:** Changing, planning, reviewing, or diagnosing a Bash CLI tool version, version display, release identity, or `VERSION` handling.  
-**Required pages:** `REPO-TYPE-BASH-CLI`, `QUALITY-DEPENDENCIES-COMPATIBILITY`  
+**Required pages:** `REPO-TYPE-BASH-CLI`, `WORKFLOW-SEMANTIC-VERSIONING`  
 **Overrides:** None.  
-**Ruleset version:** `2.3.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.4.0`.  
+**Updated:** `2026-08-10`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 
 ## VERSION file
@@ -21,13 +21,7 @@ The file MUST NOT contain a key, `v` prefix, spaces, comments, or extra blank li
 
 ## Semantic versioning
 
-| Change | Example |
-| --- | --- |
-| Backward-compatible fix or documentation correction | `1.2.3 -> 1.2.4`. |
-| Backward-compatible command or significant behavior | `1.2.3 -> 1.3.0`. |
-| Breaking CLI, configuration, or persisted-state contract | `1.2.3 -> 2.0.0`. |
-
-Determine the bump from the user-visible contract, not the number of changed files. Do not invent or bump a version unless requested or required by the exact repository workflow.
+Use `WORKFLOW-SEMANTIC-VERSIONING` to decide whether to bump and to calculate patch, minor, and major versions. In particular, CLI version components are unbounded integers: `1.9.0` advances to `1.10.0` for a minor release, never to `2.0.0` merely because the minor component reached `9`.
 
 ## Reading the version
 
@@ -47,4 +41,4 @@ Do not force a version line into machine-readable output whose contract forbids 
 
 ## Commits
 
-When the staged `VERSION` file contains a verified new version, the commit subject includes that version under the Git commit-message rules. The version bump remains in the same logical commit as the change that requires it unless the repository explicitly separates release commits.
+When the staged `VERSION` file contains a verified new version, the commit subject includes that exact version under the Git commit-message rules. The commit message MUST NOT calculate a separate next version. The version bump remains in the same logical commit as the change that requires it unless the repository explicitly separates release commits.

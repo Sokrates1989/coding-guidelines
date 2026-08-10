@@ -5,7 +5,7 @@
 **Applies when:** Changing, planning, reviewing, or diagnosing database schemas, migration files, persisted data transformations, or compatibility between application and database versions.  
 **Required pages:** `CORE-CHANGE-SAFETY`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`  
 **Overrides:** None.  
-**Ruleset version:** `2.3.0`.  
+**Ruleset version:** `2.4.0`.  
 **Updated:** `2026-08-09`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
