@@ -5,7 +5,7 @@
 **Applies when:** Changing, planning, reviewing, or diagnosing secrets, configs, registry publication, deployment scripts, production rollout, or rollback behavior.  
 **Required pages:** `REPO-TYPE-DOCKER-SWARM`, `SWARM-STACK-STRUCTURE`, `CORE-CHANGE-SAFETY`  
 **Overrides:** None.  
-**Ruleset version:** `2.1.0`.  
+**Ruleset version:** `2.2.0`.  
 **Updated:** `2026-08-09`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 

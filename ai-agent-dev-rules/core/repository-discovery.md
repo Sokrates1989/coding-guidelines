@@ -5,7 +5,7 @@
 **Applies when:** The task is performed inside or near a Git repository, or repository-specific rules may apply.  
 **Required pages:** `ROOT-ROUTER`, `CORE-OPERATING-CONTRACT`  
 **Overrides:** None.  
-**Ruleset version:** `2.1.0`.  
+**Ruleset version:** `2.2.0`.  
 **Updated:** `2026-08-09`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

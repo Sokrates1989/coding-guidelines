@@ -5,7 +5,7 @@
 **Applies when:** Every AI-assisted software task that may inspect, create, modify, refactor, test, document, commit, build, publish, deploy, or review repository content.  
 **Required pages:** None.  
 **Overrides:** None.  
-**Ruleset version:** `2.1.0`.  
+**Ruleset version:** `2.2.0`.  
 **Updated:** `2026-08-10`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 
@@ -14,6 +14,16 @@
 This page is the canonical rule router for AI coding agents. It deliberately contains only selection, precedence, and access instructions. Detailed standards live on narrowly scoped pages.
 
 **Do not load the complete ruleset.** Load only the pages selected by the procedure below. Re-evaluate the selection whenever the planned edit scope expands.
+
+## In-run rule retention
+
+Within one continuous agent run, already-read rule pages remain active while their content, Rule IDs, and ruleset version are reliably available in context. A new operator message alone is not a reload trigger.
+
+- At the start of a new run, load the root and selected pages normally.
+- On each follow-up, re-evaluate the planned scope and load only newly applicable pages and their required dependencies. MUST NOT reread unchanged pages solely because another message arrived.
+- Reload the root and applicable pages when the operator says the rules changed or requests a refresh, the checked-out rules revision changed, context compaction or handoff no longer preserves required content, or the agent cannot reliably identify the loaded version or requirements.
+- Compaction does not require a reload when the retained context still preserves every applicable instruction and the loaded Rule IDs and version. When uncertain, reload before modifying files.
+- Strict adherence takes priority over avoiding a repeated read.
 
 ## Normative vocabulary
 
@@ -26,8 +36,8 @@ This page is the canonical rule router for AI coding agents. It deliberately con
 
 ## Mandatory selection procedure
 
-1. Confirm that this root page is readable. If it is not, stop and report the inaccessible URL.
-2. Load the [operating contract](ai-agent-dev-rules/core/operating-contract.md).
+1. At the start of a new run or when the in-run retention rules require a reload, confirm that this root page is readable. If it is not, stop and report the inaccessible local path.
+2. Load the [operating contract](ai-agent-dev-rules/core/operating-contract.md) unless it is already retained unchanged under the in-run retention rules.
 3. Perform bounded read-only discovery. When work is inside or near Git, load [repository discovery](ai-agent-dev-rules/core/repository-discovery.md).
 4. Identify all cumulative task modes, planned or reviewed files, languages, frameworks, repository identity/family, and workflows.
 5. Before modifications or side effects, load [change safety and scope](ai-agent-dev-rules/core/change-safety-and-scope.md). For changes or reviews, load [validation and completion](ai-agent-dev-rules/core/validation-and-completion.md). For any task that may change files in a Git worktree, load the [Git commit workflow](ai-agent-dev-rules/workflows/git-commit-messages.md) before editing.
@@ -35,7 +45,7 @@ This page is the canonical rule router for AI coding agents. It deliberately con
 7. Recursively load `Required pages` before dependents, deduplicate by Rule ID, and require one consistent ruleset version.
 8. Load newly applicable pages before expanding the planned scope.
 9. Never claim compliance with an unread page.
-10. If a required page is inaccessible or materially conflicting or ambiguous, stop before editing and report its URL and the problem.
+10. If a required page is inaccessible or materially conflicting or ambiguous, stop before editing and report its local path and the problem.
 
 ## Precedence
 
@@ -89,6 +99,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 ## Token discipline
 
 - Do not read optional examples, unrelated languages, unrelated repository families, or unrelated workflow pages.
+- Do not reread an unchanged page that remains reliably available in the current run.
 - Exact repository pages contain only deltas and routing. Follow their required links instead of searching the full rules tree.
 - Prefer repository-defined commands and nearby established patterns over loading additional generic guidance.
 - Record loaded rule IDs in the completion report; do not repeat their full text.

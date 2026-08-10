@@ -1,5 +1,5 @@
 {
-    "rulesetVersion":  "2.1.0",
+    "rulesetVersion":  "2.2.0",
     "updated":  "2026-08-10",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  879
+                      "estimatedWords":  1078
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
