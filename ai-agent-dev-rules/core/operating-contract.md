@@ -5,8 +5,8 @@
 **Applies when:** Every task governed by this ruleset.  
 **Required pages:** `ROOT-ROUTER`  
 **Overrides:** None.  
-**Ruleset version:** `2.0.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.1.0`.  
+**Updated:** `2026-08-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Mandatory behavior
@@ -19,7 +19,8 @@
 - MUST keep documentation, tests, types, configuration, and generated artifacts synchronized with the behavior actually changed.
 - MUST NOT fabricate files, commands, test results, versions, issue IDs, dependencies, routes, APIs, or repository state.
 - MUST NOT claim a command succeeded unless it was executed and its result was observed.
-- MUST NOT commit, push, publish, deploy, delete remote data, or modify production resources unless explicitly requested.
+- When files change in a Git worktree, MUST follow the [Git commit workflow](../workflows/git-commit-messages.md), including its mandatory local-commit boundary and staging restrictions.
+- MUST NOT push, publish, deploy, delete remote data, or modify production resources unless explicitly requested.
 - MUST stop and report a conflict when equally specific applicable rules cannot be reconciled.
 
 ## Repository evidence order

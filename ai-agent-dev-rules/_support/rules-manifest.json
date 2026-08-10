@@ -1,6 +1,6 @@
 {
-    "rulesetVersion":  "2.0.0",
-    "updated":  "2026-08-09",
+    "rulesetVersion":  "2.1.0",
+    "updated":  "2026-08-10",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
     "pages":  [
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  848
+                      "estimatedWords":  879
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -28,7 +28,7 @@
                       "loadWhen":  [
                                        "Every governed task."
                                    ],
-                      "estimatedWords":  391
+                      "estimatedWords":  414
                   },
                   {
                       "id":  "CORE-REPOSITORY-DISCOVERY",
@@ -438,17 +438,19 @@
                   },
                   {
                       "id":  "WORKFLOW-GIT-COMMITS",
-                      "title":  "Git Commit Message Rules",
+                      "title":  "Git Commit Workflow Rules",
                       "file":  "ai-agent-dev-rules/workflows/git-commit-messages.md",
                       "type":  "normative",
                       "requires":  [
                                        "CORE-OPERATING-CONTRACT",
+                                       "CORE-CHANGE-SAFETY",
                                        "CORE-VALIDATION-COMPLETION"
                                    ],
                       "loadWhen":  [
-                                       "Commit message or commit command requested."
+                                       "Any task may change files in a Git worktree.",
+                                       "Commit message, commit command, or staged-change review requested."
                                    ],
-                      "estimatedWords":  500
+                      "estimatedWords":  845
                   },
                   {
                       "id":  "WORKFLOW-CI-CD",

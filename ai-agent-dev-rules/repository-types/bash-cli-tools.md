@@ -5,7 +5,7 @@
 **Applies when:** The repository is an installable, stateful, Bash-first CLI tool with a dispatcher, workflow scripts, shared libraries, setup lifecycle, and user-facing commands.  
 **Required pages:** `LANG-BASH`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
-**Ruleset version:** `2.0.0`.  
+**Ruleset version:** `2.1.0`.  
 **Updated:** `2026-08-09`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

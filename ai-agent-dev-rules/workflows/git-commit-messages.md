@@ -1,13 +1,30 @@
-# Git Commit Message Rules
+# Git Commit Workflow Rules
 
 **Rule ID:** `WORKFLOW-GIT-COMMITS`  
 **Status:** Active.  
-**Applies when:** The user asks for a commit message, commit command, commit review, or an actual commit.  
-**Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-VALIDATION-COMPLETION`  
+**Applies when:** A task may change files in a Git worktree, or the user asks for a commit message, commit command, staged-change review, or actual commit.  
+**Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
-**Ruleset version:** `2.0.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.1.0`.  
+**Updated:** `2026-08-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
+
+## Mandatory local commits
+
+A coherent coding session is one closed logical unit of operator-requested repository work. It includes the code, tests, documentation, configuration, and generated artifacts required to complete that task. Size does not determine coherence: a one-sentence documentation correction or another tiny change is coherent when it is the complete requested task. A conversation turn is not automatically a session boundary, and unrelated tasks MUST NOT be combined merely because they occurred during one agent run.
+
+Unless the current operator explicitly instructs otherwise:
+
+- After completing each coherent coding session and executing or transparently accounting for its required validation, MUST create one local commit before reporting that task complete.
+- MUST commit exactly the files and hunks created, modified, or deleted during that session. MUST NOT stage or commit unrelated pre-existing, user-owned, or other-session changes.
+- MUST inspect `git status --short`, the relevant working-tree diff, and the staged diff before committing. Existing staged content MUST NOT be included unless it belongs to the current session.
+- When one file contains both current-session changes and unrelated pre-existing changes, MUST isolate only the current-session hunks. If safe isolation is not possible, stop and report the blocker instead of committing unrelated work.
+- Read-only work, sessions with no net file changes, and incomplete units do not require a commit. MUST NOT create an empty commit merely to satisfy this rule.
+- The local-commit requirement authorizes only the staging and commit operations necessary for the current session. MUST NOT push, force-push, publish, open a pull request, or otherwise transfer commits to a remote without an explicit operator request.
+- After committing, MUST verify the committed scope and repository status, report the local commit identifier, and disclose any remaining unrelated changes.
+- If repository state, Git identity, signing, hooks, or another technical condition blocks a safe commit, MUST report the exact blocker and leave the session changes unpushed.
+
+An explicit operator instruction MAY opt out of the commit, defer or combine identified sessions, include identified additional files, or authorize a push. Never infer an exception from silence.
 
 ## Determine the message scope
 

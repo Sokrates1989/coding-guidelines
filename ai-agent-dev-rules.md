@@ -5,8 +5,8 @@
 **Applies when:** Every AI-assisted software task that may inspect, create, modify, refactor, test, document, commit, build, publish, deploy, or review repository content.  
 **Required pages:** None.  
 **Overrides:** None.  
-**Ruleset version:** `2.0.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.1.0`.  
+**Updated:** `2026-08-10`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 
 ## Purpose
@@ -30,7 +30,7 @@ This page is the canonical rule router for AI coding agents. It deliberately con
 2. Load the [operating contract](ai-agent-dev-rules/core/operating-contract.md).
 3. Perform bounded read-only discovery. When work is inside or near Git, load [repository discovery](ai-agent-dev-rules/core/repository-discovery.md).
 4. Identify all cumulative task modes, planned or reviewed files, languages, frameworks, repository identity/family, and workflows.
-5. Before modifications or side effects, load [change safety and scope](ai-agent-dev-rules/core/change-safety-and-scope.md). For changes or reviews, load [validation and completion](ai-agent-dev-rules/core/validation-and-completion.md).
+5. Before modifications or side effects, load [change safety and scope](ai-agent-dev-rules/core/change-safety-and-scope.md). For changes or reviews, load [validation and completion](ai-agent-dev-rules/core/validation-and-completion.md). For any task that may change files in a Git worktree, load the [Git commit workflow](ai-agent-dev-rules/workflows/git-commit-messages.md) before editing.
 6. Load the matching exact-repository page and only the other triggered pages below.
 7. Recursively load `Required pages` before dependents, deduplicate by Rule ID, and require one consistent ruleset version.
 8. Load newly applicable pages before expanding the planned scope.
@@ -82,7 +82,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | Docker Swarm, Traefik, stack files, or production container routing | [Docker Swarm repositories](ai-agent-dev-rules/repository-types/docker-swarm.md). |
 | Wrapper around generated, upstream, or submodule content | [Wrapper repositories](ai-agent-dev-rules/repository-types/wrapper-repositories.md). |
 | Template, generator, golden output, or owned generated file | [Template repositories](ai-agent-dev-rules/repository-types/template-repositories.md). |
-| Commit command or commit message | [Git commit messages](ai-agent-dev-rules/workflows/git-commit-messages.md). |
+| Any file-changing task in a Git worktree, commit command, commit message, or staged-change review | [Git commit workflow](ai-agent-dev-rules/workflows/git-commit-messages.md). |
 | Pipeline or automation workflow | [CI/CD](ai-agent-dev-rules/workflows/ci-cd.md). |
 | Database schema or data migration | [Database migrations](ai-agent-dev-rules/workflows/database-migrations.md). |
 
