@@ -5,7 +5,7 @@
 **Applies when:** Every AI-assisted software task that may inspect, create, modify, refactor, test, document, commit, build, publish, deploy, or review repository content.  
 **Required pages:** None.  
 **Overrides:** None.  
-**Ruleset version:** `2.2.0`.  
+**Ruleset version:** `2.3.0`.  
 **Updated:** `2026-08-10`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 
@@ -79,6 +79,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | --- | --- |
 | Comments, docstrings, file headers, JSX section comments, or undocumented code | [Comments and docstrings](ai-agent-dev-rules/documentation/comments-and-docstrings.md). Load its examples only when the format is unclear. |
 | README, architecture, setup, API, or companion documentation | [Repository documentation](ai-agent-dev-rules/documentation/repository-documentation.md). |
+| User-facing text, messages, translations, or localization providers | [Localization and user-facing text](ai-agent-dev-rules/code-quality/localization.md). |
 | Large functions/files, extraction, modularization, or structural refactoring | [Structure and refactoring](ai-agent-dev-rules/code-quality/structure-and-refactoring.md). |
 | Tests, regressions, verification, or refactoring | [Testing](ai-agent-dev-rules/code-quality/testing.md). |
 | Dependencies, lock files, public interfaces, or compatibility | [Dependencies and compatibility](ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md). |

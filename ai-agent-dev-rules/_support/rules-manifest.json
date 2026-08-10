@@ -1,5 +1,5 @@
 {
-    "rulesetVersion":  "2.2.0",
+    "rulesetVersion":  "2.3.0",
     "updated":  "2026-08-10",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1078
+                      "estimatedWords":  1093
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -169,6 +169,22 @@
                       "estimatedWords":  233
                   },
                   {
+                      "id":  "QUALITY-LOCALIZATION",
+                      "title":  "Localization and User-Facing Text",
+                      "file":  "ai-agent-dev-rules/code-quality/localization.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-CHANGE-SAFETY",
+                                       "CORE-VALIDATION-COMPLETION"
+                                   ],
+                      "loadWhen":  [
+                                       "User-facing text, messages, labels, errors, notifications, or accessibility copy changes.",
+                                       "Localization resources, locale behavior, or localization providers change."
+                                   ],
+                      "estimatedWords":  667
+                  },
+                  {
                       "id":  "LANG-PYTHON",
                       "title":  "Python Development Rules",
                       "file":  "ai-agent-dev-rules/languages/python.md",
@@ -194,7 +210,7 @@
                       "loadWhen":  [
                                        "Planned or reviewed files include JavaScript or TypeScript."
                                    ],
-                      "estimatedWords":  313
+                      "estimatedWords":  302
                   },
                   {
                       "id":  "FRAMEWORK-REACT",
@@ -251,7 +267,7 @@
                       "loadWhen":  [
                                        "Planned or reviewed files include Dart, Flutter, `pubspec.yaml`, or Flutter platform configuration."
                                    ],
-                      "estimatedWords":  304
+                      "estimatedWords":  310
                   },
                   {
                       "id":  "REPO-TYPE-BASH-CLI",

@@ -5,8 +5,8 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to JavaScript, TypeScript, Node.js tooling, frontend modules, or related tests/configuration.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
-**Ruleset version:** `2.2.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.3.0`.  
+**Updated:** `2026-08-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Control flow and typing
@@ -39,4 +39,4 @@ Keep browser-only and server-only dependencies separated. Do not expose secrets 
 
 ## User-facing text
 
-When the repository has internationalization, all new user-visible and AI-generated UI text MUST use translation keys. Update every required locale, including English and German when those locales are supported. Do not hardcode a parallel untranslated string.
+All new or changed user-visible and AI-generated text MUST follow [Localization and User-Facing Text](../code-quality/localization.md). Do not hardcode a parallel untranslated fallback string.

@@ -5,8 +5,8 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to Dart, Flutter widgets, packages, platform integration, Flutter tests, or Flutter project configuration.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
-**Ruleset version:** `2.2.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.3.0`.  
+**Updated:** `2026-08-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Dart language
@@ -32,7 +32,7 @@ Do not edit generated Dart, localization output, platform registrants, build out
 
 ## Localization and accessibility
 
-Use localization keys for user-visible text when localization is configured. Update every required locale. Use semantic widgets, labels, focus order, and touch targets appropriate to the supported platforms.
+All user-visible text MUST follow [Localization and User-Facing Text](../code-quality/localization.md), including its provider-selection and locale-coverage requirements. Use semantic widgets, localized accessibility labels, focus order, and touch targets appropriate to the supported platforms.
 
 ## Validation
 

@@ -5,7 +5,7 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to Python source, tests, packaging, tooling, or configuration.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
-**Ruleset version:** `2.2.0`.  
+**Ruleset version:** `2.3.0`.  
 **Updated:** `2026-08-09`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

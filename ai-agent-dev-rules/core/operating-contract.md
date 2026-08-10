@@ -5,7 +5,7 @@
 **Applies when:** Every task governed by this ruleset.  
 **Required pages:** `ROOT-ROUTER`  
 **Overrides:** None.  
-**Ruleset version:** `2.2.0`.  
+**Ruleset version:** `2.3.0`.  
 **Updated:** `2026-08-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

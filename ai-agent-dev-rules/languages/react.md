@@ -5,8 +5,8 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to React components, hooks, JSX/TSX, state, context, or React tests.  
 **Required pages:** `LANG-JAVASCRIPT-TYPESCRIPT`, `DOC-COMMENTS-DOCSTRINGS`, `QUALITY-STRUCTURE-REFACTORING`  
 **Overrides:** None.  
-**Ruleset version:** `2.2.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.3.0`.  
+**Updated:** `2026-08-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Components and hooks
@@ -36,4 +36,4 @@ Preserve semantic elements, keyboard access, focus behavior, labels, error assoc
 
 ## Text and configuration
 
-Use the repository’s i18n system for user-visible text when present. Keep environment-specific frontend configuration out of source code and never expose secrets to the browser.
+User-visible text MUST follow [Localization and User-Facing Text](../code-quality/localization.md). Keep environment-specific frontend configuration out of source code and never expose secrets to the browser.
