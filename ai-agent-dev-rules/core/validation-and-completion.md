@@ -5,7 +5,7 @@
 **Applies when:** Every task that changes or reviews repository content.  
 **Required pages:** `ROOT-ROUTER`, `CORE-OPERATING-CONTRACT`  
 **Overrides:** None.  
-**Ruleset version:** `2.4.0`.  
+**Ruleset version:** `2.5.0`.  
 **Updated:** `2026-08-09`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

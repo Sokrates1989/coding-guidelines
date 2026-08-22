@@ -1,6 +1,6 @@
 {
-    "rulesetVersion":  "2.4.0",
-    "updated":  "2026-08-10",
+    "rulesetVersion":  "2.5.0",
+    "updated":  "2026-08-22",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
     "pages":  [
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1076
+                      "estimatedWords":  1092
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -451,6 +451,24 @@
                                        "Template, generator, blueprint, recipe, golden output, or ownership changes."
                                    ],
                       "estimatedWords":  258
+                  },
+                  {
+                      "id":  "REPO-TYPE-THUNDERBIRD-EXTENSION",
+                      "title":  "Thunderbird Extension Repository Rules",
+                      "file":  "ai-agent-dev-rules/repository-types/thunderbird-extensions.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-REPOSITORY-DISCOVERY",
+                                       "WORKFLOW-SEMANTIC-VERSIONING",
+                                       "WORKFLOW-GIT-COMMITS",
+                                       "QUALITY-TESTING",
+                                       "QUALITY-DEPENDENCIES-COMPATIBILITY",
+                                       "QUALITY-LOCALIZATION"
+                                   ],
+                      "loadWhen":  [
+                                       "Thunderbird MailExtension, add-on, plugin, XPI, or native installer work is planned, changed, reviewed, packaged, or released."
+                                   ],
+                      "estimatedWords":  681
                   },
                   {
                       "id":  "WORKFLOW-SEMANTIC-VERSIONING",

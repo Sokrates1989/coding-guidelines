@@ -5,8 +5,8 @@
 **Applies when:** Every AI-assisted software task that may inspect, create, modify, refactor, test, document, commit, build, publish, deploy, or review repository content.  
 **Required pages:** None.  
 **Overrides:** None.  
-**Ruleset version:** `2.4.0`.  
-**Updated:** `2026-08-10`.  
+**Ruleset version:** `2.5.0`.  
+**Updated:** `2026-08-22`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 
 ## Purpose
@@ -91,6 +91,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | PowerShell | [PowerShell](ai-agent-dev-rules/languages/powershell.md). |
 | Dart or Flutter | [Dart and Flutter](ai-agent-dev-rules/languages/dart-flutter.md). |
 | Installable, stateful Bash CLI tool architecture | [Bash CLI tools](ai-agent-dev-rules/repository-types/bash-cli-tools.md). |
+| Thunderbird MailExtension, add-on, plugin, XPI, or native Thunderbird installer | [Thunderbird extension repositories](ai-agent-dev-rules/repository-types/thunderbird-extensions.md). |
 | Docker Swarm, Traefik, stack files, or production container routing | [Docker Swarm repositories](ai-agent-dev-rules/repository-types/docker-swarm.md). |
 | Wrapper around generated, upstream, or submodule content | [Wrapper repositories](ai-agent-dev-rules/repository-types/wrapper-repositories.md). |
 | Template, generator, golden output, or owned generated file | [Template repositories](ai-agent-dev-rules/repository-types/template-repositories.md). |
