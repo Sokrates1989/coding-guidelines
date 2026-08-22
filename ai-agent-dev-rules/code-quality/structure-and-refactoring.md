@@ -5,7 +5,7 @@
 **Applies when:** A file or function grows materially, structural extraction is implemented, planned, reviewed, or diagnosed, or the task is a refactor.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
-**Ruleset version:** `2.5.0`.  
+**Ruleset version:** `2.6.0`.  
 **Updated:** `2026-08-09`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

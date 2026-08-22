@@ -5,7 +5,7 @@
 **Applies when:** Changing, planning, reviewing, or diagnosing installation, manual update, persisted setup state, reset, guided configuration, or uninstall behavior.  
 **Required pages:** `REPO-TYPE-BASH-CLI`, `CORE-CHANGE-SAFETY`  
 **Overrides:** None.  
-**Ruleset version:** `2.5.0`.  
+**Ruleset version:** `2.6.0`.  
 **Updated:** `2026-08-09`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 

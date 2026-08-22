@@ -5,7 +5,7 @@
 **Applies when:** Changing, planning, reviewing, or diagnosing a Bash CLI tool version, version display, release identity, or `VERSION` handling.  
 **Required pages:** `REPO-TYPE-BASH-CLI`, `WORKFLOW-SEMANTIC-VERSIONING`  
 **Overrides:** None.  
-**Ruleset version:** `2.5.0`.  
+**Ruleset version:** `2.6.0`.  
 **Updated:** `2026-08-10`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 

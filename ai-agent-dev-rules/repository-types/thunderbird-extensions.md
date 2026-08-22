@@ -5,7 +5,7 @@
 **Applies when:** Work creates, changes, reviews, packages, or releases a Thunderbird MailExtension, add-on, plugin, XPI archive, or native installer for one.  
 **Required pages:** `CORE-REPOSITORY-DISCOVERY`, `WORKFLOW-SEMANTIC-VERSIONING`, `WORKFLOW-GIT-COMMITS`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`, `QUALITY-LOCALIZATION`  
 **Overrides:** None.  
-**Ruleset version:** `2.5.0`.  
+**Ruleset version:** `2.6.0`.  
 **Updated:** `2026-08-22`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
@@ -48,6 +48,7 @@ At minimum, validate the following for each release boundary:
 - Parse the source manifest and verify semantic version syntax, the stable extension ID, and supported Thunderbird bounds.
 - Inspect the built XPI for the matching manifest version and ID, required scripts/resources, English and German localization, install defaults, and portable archive paths.
 - Run repository installer tests in disposable profile directories. Verify first install and update replacement while preserving the stable ID and stored settings contract.
+- Native-companion tests that generate or convert synthetic email, Office, image, or PDF fixtures MUST use the operating system temporary area, not a protected Documents checkout or repository-local base-temporary directory. This reduces anti-ransomware false positives and keeps generated documents out of source trees.
 - Inspect native package metadata, payload, installer scripts, and displayed artifact version. On macOS, verify current-user scope and that installation never force-terminates Thunderbird. On Windows, verify per-user scope and update cleanup when those are the documented contracts.
 - Run syntax checks for changed shell or installer sources and `git diff --check`.
 - Compute and report a SHA-256 checksum for every built artifact handed to the operator.
@@ -61,3 +62,23 @@ The implementation, version synchronization, installer-source changes, tests, an
 Before committing, inspect the staged version and full staged diff. The commit body MUST record the XPI and installer validation actually run, platform installers not built, compatibility boundaries, and signing or notarization limitations.
 
 The completion report MUST include the release version, local commit ID, absolute artifact paths, SHA-256 checksums, and any platform installer that remains unbuilt.
+
+## Public repository and release standard
+
+Before the first public release, the agent MUST verify or prepare:
+
+- A permanent extension ID using a domain controlled by the maintainer or another identity accepted by addons.thunderbird.net. A placeholder domain MUST NOT be published. Changing an already published ID is a breaking installation boundary.
+- An OSI-approved open-source license selected by the operator, included at the repository root, in every XPI, and in every native installer payload. Package metadata and documentation MUST identify the same SPDX license expression. If requested restrictions conflict with open source, stop and explain the conflict before choosing a license.
+- Native Windows and macOS installers that display the project license before installation and require the installer’s standard acknowledgement to continue. This acknowledgement MUST NOT add an EULA or restrictions beyond the selected license.
+- A public README with latest-release, complete release-history, stable installer, build, privacy, support, contribution, and license links. Projects that process or transfer personal data MUST publish an accurate privacy policy. Public repositories SHOULD also provide contribution and security policies.
+- Reviewer-ready source, deterministic build instructions, English and German listing text, screenshots, permission explanations, external-service or native-companion disclosures, and test instructions for addons.thunderbird.net.
+
+GitHub release history MUST use the repository’s /releases page and the current release MUST use /releases/latest. Every release MUST retain versioned XPI and installer assets plus SHA-256 checksums. It MUST also upload byte-identical stable aliases for the current supported installers so README links can use /releases/latest/download/<stable-name> without changing on every version. Release automation is optional, but it MUST preserve operator control and MUST NOT publish merely because a local build succeeds.
+
+Before changing a private repository to public, inspect tracked files and relevant history for secrets and private data. Repository visibility, tags, pushes, GitHub Releases, store submissions, signing, and notarization remain externally visible publication actions and require explicit operator authorization.
+
+## Store and platform trust
+
+The Thunderbird Add-ons listing distributes the XPI, not a native companion. A project that requires native messaging MUST publish the companion installers separately and disclose that dependency prominently to users and reviewers. An add-on that sends data to an AI or other remote service MUST disclose the exact data categories, trigger, provider, credential model, retention boundary, and any paid-service requirement before submission.
+
+Public native installers SHOULD be code signed. For macOS, sign nested executables where applicable, sign the flat package with the correct Developer ID identities, submit it with the current Apple notarization workflow, staple the ticket, and validate with Gatekeeper tooling. For Windows, Authenticode-sign and timestamp the final installer. When credentials or certificates are unavailable, keep them out of the repository, hand off unsigned artifacts only as clearly labeled test builds, and document the resulting Gatekeeper or SmartScreen warning.
