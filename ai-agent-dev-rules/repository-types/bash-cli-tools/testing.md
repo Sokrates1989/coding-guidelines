@@ -5,8 +5,8 @@
 **Applies when:** Validating, planning, reviewing, or diagnosing changes to an applicable Bash CLI tool.  
 **Required pages:** `REPO-TYPE-BASH-CLI`, `QUALITY-TESTING`  
 **Overrides:** None.  
-**Ruleset version:** `2.6.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.7.0`.  
+**Updated:** `2026-08-23`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 
 ## Mandatory static checks

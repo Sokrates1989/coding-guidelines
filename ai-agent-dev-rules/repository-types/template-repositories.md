@@ -5,8 +5,8 @@
 **Applies when:** Changing, planning, reviewing, or diagnosing templates, generators, blueprints, recipes, golden outputs, ownership manifests, or generated application trees.  
 **Required pages:** `CORE-CHANGE-SAFETY`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`  
 **Overrides:** None.  
-**Ruleset version:** `2.6.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.7.0`.  
+**Updated:** `2026-08-23`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Source ownership

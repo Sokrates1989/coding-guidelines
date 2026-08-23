@@ -5,8 +5,8 @@
 **Applies when:** The normalized Git remote is `github.com/sokrates1989/figma-website`.  
 **Required pages:** `REPO-TYPE-WRAPPER`, `CORE-REPOSITORY-DISCOVERY`  
 **Overrides:** None.  
-**Ruleset version:** `2.6.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.7.0`.  
+**Updated:** `2026-08-23`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Identity

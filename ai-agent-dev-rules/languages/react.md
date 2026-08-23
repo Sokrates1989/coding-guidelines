@@ -5,8 +5,8 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to React components, hooks, JSX/TSX, state, context, or React tests.  
 **Required pages:** `LANG-JAVASCRIPT-TYPESCRIPT`, `DOC-COMMENTS-DOCSTRINGS`, `QUALITY-STRUCTURE-REFACTORING`  
 **Overrides:** None.  
-**Ruleset version:** `2.6.0`.  
-**Updated:** `2026-08-10`.  
+**Ruleset version:** `2.7.0`.  
+**Updated:** `2026-08-23`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Components and hooks

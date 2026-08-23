@@ -5,8 +5,8 @@
 **Applies when:** A task selects, changes, reviews, or reports a tool, application, package, release, installer, artifact, tag, or commit-message version.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`, `QUALITY-DEPENDENCIES-COMPATIBILITY`  
 **Overrides:** None.  
-**Ruleset version:** `2.6.0`.  
-**Updated:** `2026-08-10`.  
+**Ruleset version:** `2.7.0`.  
+**Updated:** `2026-08-23`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Decide whether a bump is required

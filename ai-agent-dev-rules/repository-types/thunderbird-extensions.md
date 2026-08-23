@@ -3,10 +3,10 @@
 **Rule ID:** `REPO-TYPE-THUNDERBIRD-EXTENSION`  
 **Status:** Active.  
 **Applies when:** Work creates, changes, reviews, packages, or releases a Thunderbird MailExtension, add-on, plugin, XPI archive, or native installer for one.  
-**Required pages:** `CORE-REPOSITORY-DISCOVERY`, `WORKFLOW-SEMANTIC-VERSIONING`, `WORKFLOW-GIT-COMMITS`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`, `QUALITY-LOCALIZATION`  
+**Required pages:** `CORE-REPOSITORY-DISCOVERY`, `WORKFLOW-SEMANTIC-VERSIONING`, `WORKFLOW-GIT-COMMITS`, `WORKFLOW-CI-CD`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`, `QUALITY-LOCALIZATION`  
 **Overrides:** None.  
-**Ruleset version:** `2.6.0`.  
-**Updated:** `2026-08-22`.  
+**Ruleset version:** `2.7.0`.  
+**Updated:** `2026-08-23`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Release boundary after implementation
@@ -20,8 +20,9 @@ For every release boundary, the agent MUST:
 3. Build a fresh installable XPI from the completed source.
 4. Build every native installer supported by the current host and repository tooling.
 5. Validate the archive and installer before committing and handing them to the operator.
+6. For repositories that publish installers for more than one operating system, verify that the release workflow builds every supported installer on its native operating-system runner before publication.
 
-MUST NOT hand off an installer from a prior version or claim that a non-built platform installer is current. If required tooling is unavailable on the host, synchronize its source metadata, report the exact unbuilt installer, and provide every successfully built artifact.
+MUST NOT hand off an installer from a prior version or claim that a non-built platform installer is current. If required tooling is unavailable on the host, synchronize its source metadata, report the exact locally unbuilt installer, and identify the validated native-runner workflow that will build it before publication.
 
 ## Identity and version synchronization
 
@@ -37,6 +38,7 @@ MUST NOT hand off an installer from a prior version or claim that a non-built pl
 - Use repository-owned build scripts; do not assemble XPI, PKG, or EXE files manually when a builder exists.
 - Build from the current worktree only after focused behavior checks pass.
 - A repository that promises direct native installation SHOULD provide macOS and Windows builders. Build the macOS package on macOS and the Windows installer on Windows unless the repository has a validated cross-build workflow.
+- Do not require a developer workstation to emulate the other operating system merely to satisfy a multi-platform release. Prefer native macOS and Windows CI runners, and execute the same repository-owned builders and installer tests used locally.
 - Keep generated XPI and installer binaries out of Git unless repository ownership explicitly tracks release artifacts.
 - Never sign, notarize, publish, upload, tag, push, or install into the operator's live Thunderbird profile without explicit authorization. Report unsigned or unnotarized status.
 
@@ -73,7 +75,9 @@ Before the first public release, the agent MUST verify or prepare:
 - A public README with latest-release, complete release-history, stable installer, build, privacy, support, contribution, and license links. Projects that process or transfer personal data MUST publish an accurate privacy policy. Public repositories SHOULD also provide contribution and security policies.
 - Reviewer-ready source, deterministic build instructions, English and German listing text, screenshots, permission explanations, external-service or native-companion disclosures, and test instructions for addons.thunderbird.net.
 
-GitHub release history MUST use the repository’s /releases page and the current release MUST use /releases/latest. Every release MUST retain versioned XPI and installer assets plus SHA-256 checksums. It MUST also upload byte-identical stable aliases for the current supported installers so README links can use /releases/latest/download/<stable-name> without changing on every version. Release automation is optional, but it MUST preserve operator control and MUST NOT publish merely because a local build succeeds.
+GitHub release history MUST use the repository’s /releases page and the current release MUST use /releases/latest. Every release MUST retain versioned XPI and installer assets plus SHA-256 checksums. It MUST also upload byte-identical stable aliases for the current supported installers so README links can use /releases/latest/download/<stable-name> without changing on every version.
+
+A public project that supports native installers on more than one operating system MUST automate the complete release on native CI runners. A push to the documented release branch MAY be the operator-controlled publication trigger when the operator explicitly authorizes that contract. The workflow MUST read the authoritative extension version, skip publication when that version already has a release, build and test every supported native installer, publish all platform assets together, create the matching version tag and latest release, and fail instead of publishing a partial release. A local build, an unchanged-version push, pull request, or fork MUST NOT publish. Document required repository permissions and any one-time GitHub Actions enablement so the operator knows that the triggering push is externally visible publication.
 
 Before changing a private repository to public, inspect tracked files and relevant history for secrets and private data. Repository visibility, tags, pushes, GitHub Releases, store submissions, signing, and notarization remain externally visible publication actions and require explicit operator authorization.
 

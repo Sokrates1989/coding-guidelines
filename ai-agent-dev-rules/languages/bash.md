@@ -5,8 +5,8 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to Bash scripts or Bash-owned shell workflows.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
-**Ruleset version:** `2.6.0`.  
-**Updated:** `2026-08-09`.  
+**Ruleset version:** `2.7.0`.  
+**Updated:** `2026-08-23`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Script foundation
