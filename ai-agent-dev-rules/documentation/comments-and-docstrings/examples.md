@@ -5,7 +5,7 @@
 **Applies when:** The required documentation format is unclear, a new pattern is being introduced, or the repository has no nearby valid example.  
 **Required pages:** `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
-**Ruleset version:** `2.7.0`.  
+**Ruleset version:** `2.8.0`.  
 **Updated:** `2026-08-23`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 

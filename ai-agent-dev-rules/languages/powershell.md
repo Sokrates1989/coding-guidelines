@@ -5,7 +5,7 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to PowerShell scripts, modules, or PowerShell-owned workflows.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
-**Ruleset version:** `2.7.0`.  
+**Ruleset version:** `2.8.0`.  
 **Updated:** `2026-08-23`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

@@ -5,7 +5,7 @@
 **Applies when:** Changing, planning, reviewing, or diagnosing inline help, command help, usage output, or installed man pages for an applicable Bash CLI tool.  
 **Required pages:** `REPO-TYPE-BASH-CLI`, `BASH-CLI-VERSIONING`, `DOC-REPOSITORY-DOCUMENTATION`  
 **Overrides:** None.  
-**Ruleset version:** `2.7.0`.  
+**Ruleset version:** `2.8.0`.  
 **Updated:** `2026-08-23`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 

@@ -5,7 +5,7 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to commentable source code, comments, docstrings, components, hooks, handlers, helpers, or logical code groups.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`  
 **Overrides:** None.  
-**Ruleset version:** `2.7.0`.  
+**Ruleset version:** `2.8.0`.  
 **Updated:** `2026-08-23`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

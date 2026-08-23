@@ -1,5 +1,5 @@
 {
-    "rulesetVersion":  "2.7.0",
+    "rulesetVersion":  "2.8.0",
     "updated":  "2026-08-23",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
@@ -464,12 +464,27 @@
                                        "WORKFLOW-CI-CD",
                                        "QUALITY-TESTING",
                                        "QUALITY-DEPENDENCIES-COMPATIBILITY",
-                                       "QUALITY-LOCALIZATION"
+                                       "QUALITY-LOCALIZATION",
+                                       "REPO-TYPE-THUNDERBIRD-BILINGUAL-DOCS"
                                    ],
                       "loadWhen":  [
                                        "Thunderbird MailExtension, add-on, plugin, XPI, or native installer work is planned, changed, reviewed, packaged, or released."
                                    ],
-                      "estimatedWords":  1353
+                      "estimatedWords":  1354
+                  },
+                  {
+                      "id":  "REPO-TYPE-THUNDERBIRD-BILINGUAL-DOCS",
+                      "title":  "Thunderbird Bilingual Documentation Rules",
+                      "file":  "ai-agent-dev-rules/repository-types/thunderbird-extensions/bilingual-documentation.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "DOC-REPOSITORY-DOCUMENTATION",
+                                       "QUALITY-LOCALIZATION"
+                                   ],
+                      "loadWhen":  [
+                                       "Documentation is created, changed, reviewed, packaged, or published in a Thunderbird extension repository."
+                                   ],
+                      "estimatedWords":  261
                   },
                   {
                       "id":  "WORKFLOW-SEMANTIC-VERSIONING",
