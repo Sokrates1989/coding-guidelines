@@ -1,4 +1,5 @@
 e92599ca26142cb0f7e5133ef7f52bcf711c12eea312b0ce6f3aa552a2be64e8  .gitattributes
+35ca8826926bcbaf934dd20c46f23dbbb582382203ca2f5c60034dfff6cd0ee6  .gitignore
 492d4041f3cce67a09ea9c48f305dfd68d150ad0378f5116de08b8e041fc14d8  README.md
 ef1057b3649240b88f2b3cc9fb760a708f926b99e1e9734a9e6b8735bad05d02  ai-agent-dev-rules.md
 4f12832b0a53b3249cc73cc92babaa1331e7456a417ca7141c674fb9f62234fc  ai-agent-dev-rules/_support/README.md
