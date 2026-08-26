@@ -5,13 +5,13 @@
 **Applies when:** Every AI-assisted software task that may inspect, create, modify, refactor, test, document, commit, build, publish, deploy, or review repository content.  
 **Required pages:** None.  
 **Overrides:** None.  
-**Ruleset version:** `2.8.0`.  
-**Updated:** `2026-08-23`.  
+**Ruleset version:** `2.9.0`.  
+**Updated:** `2026-08-26`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 
 ## Purpose
 
-This page is the canonical rule router for AI coding agents. It deliberately contains only selection, precedence, and access instructions. Detailed standards live on narrowly scoped pages.
+This canonical router contains only rule selection, precedence, and access instructions. Detailed standards live on narrowly scoped pages.
 
 **Do not load the complete ruleset.** Load only the pages selected by the procedure below. Re-evaluate the selection whenever the planned edit scope expands.
 
@@ -89,6 +89,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | React components or hooks | [React](ai-agent-dev-rules/languages/react.md) and JavaScript/TypeScript. |
 | Bash | [Bash](ai-agent-dev-rules/languages/bash.md). |
 | PowerShell | [PowerShell](ai-agent-dev-rules/languages/powershell.md). |
+| User-facing command or script launches an editor | [Interactive editor selection](ai-agent-dev-rules/workflows/interactive-editor-selection.md). |
 | Dart or Flutter | [Dart and Flutter](ai-agent-dev-rules/languages/dart-flutter.md). |
 | Installable, stateful Bash CLI tool architecture | [Bash CLI tools](ai-agent-dev-rules/repository-types/bash-cli-tools.md). |
 | Thunderbird MailExtension, add-on, plugin, XPI, or native Thunderbird installer | [Thunderbird extension repositories](ai-agent-dev-rules/repository-types/thunderbird-extensions.md). |
@@ -101,7 +102,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 
 ## Token discipline
 
-- Do not read optional examples, unrelated languages, unrelated repository families, or unrelated workflow pages.
+- Skip unrelated pages and optional examples.
 - Do not reread an unchanged page that remains reliably available in the current run.
 - Exact repository pages contain only deltas and routing. Follow their required links instead of searching the full rules tree.
 - Prefer repository-defined commands and nearby established patterns over loading additional generic guidance.

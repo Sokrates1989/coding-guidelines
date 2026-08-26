@@ -5,8 +5,8 @@
 **Applies when:** Creating, materially changing, planning, reviewing, or diagnosing changes to Dart, Flutter widgets, packages, platform integration, Flutter tests, or Flutter project configuration.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
-**Ruleset version:** `2.8.0`.  
-**Updated:** `2026-08-23`.  
+**Ruleset version:** `2.9.0`.  
+**Updated:** `2026-08-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Dart language

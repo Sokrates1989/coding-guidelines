@@ -5,8 +5,8 @@
 **Applies when:** A task may change files in a Git worktree, or the user asks for a commit message, commit command, staged-change review, or actual commit.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
-**Ruleset version:** `2.8.0`.  
-**Updated:** `2026-08-23`.  
+**Ruleset version:** `2.9.0`.  
+**Updated:** `2026-08-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Mandatory local commits

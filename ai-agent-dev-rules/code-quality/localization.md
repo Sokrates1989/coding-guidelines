@@ -5,8 +5,8 @@
 **Applies when:** Creating, changing, planning, reviewing, or diagnosing user-facing text, messages, labels, errors, notifications, accessibility copy, localization resources, locale behavior, or localization providers.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
-**Ruleset version:** `2.8.0`.  
-**Updated:** `2026-08-23`.  
+**Ruleset version:** `2.9.0`.  
+**Updated:** `2026-08-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Non-negotiable translation boundary

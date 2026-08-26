@@ -5,8 +5,8 @@
 **Applies when:** The task changes, plans, reviews, or diagnoses Docker Swarm stacks, Traefik routing, container images, secrets, configs, deployment scripts, or production container topology.  
 **Required pages:** `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
-**Ruleset version:** `2.8.0`.  
-**Updated:** `2026-08-23`.  
+**Ruleset version:** `2.9.0`.  
+**Updated:** `2026-08-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Load by planned edit

@@ -5,8 +5,8 @@
 **Applies when:** Tests are created, changed, run, reviewed, or required to validate a code change.  
 **Required pages:** `CORE-VALIDATION-COMPLETION`, `CORE-CHANGE-SAFETY`  
 **Overrides:** None.  
-**Ruleset version:** `2.8.0`.  
-**Updated:** `2026-08-23`.  
+**Ruleset version:** `2.9.0`.  
+**Updated:** `2026-08-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Test intent

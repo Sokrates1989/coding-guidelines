@@ -1,6 +1,6 @@
 {
-    "rulesetVersion":  "2.8.0",
-    "updated":  "2026-08-23",
+    "rulesetVersion":  "2.9.0",
+    "updated":  "2026-08-26",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
     "pages":  [
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1092
+                      "estimatedWords":  1089
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -501,6 +501,21 @@
                                        "A tool, application, package, release, installer, artifact, tag, or commit-message version is selected, changed, reviewed, or reported."
                                    ],
                       "estimatedWords":  812
+                  },
+                  {
+                      "id":  "WORKFLOW-INTERACTIVE-EDITORS",
+                      "title":  "Interactive Editor Selection",
+                      "file":  "ai-agent-dev-rules/workflows/interactive-editor-selection.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-CHANGE-SAFETY"
+                                   ],
+                      "loadWhen":  [
+                                       "A user-facing command opens a text editor.",
+                                       "A script or interactive tool selects or launches an editor."
+                                   ],
+                      "estimatedWords":  461
                   },
                   {
                       "id":  "WORKFLOW-GIT-COMMITS",
