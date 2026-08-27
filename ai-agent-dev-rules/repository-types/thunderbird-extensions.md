@@ -3,10 +3,10 @@
 **Rule ID:** `REPO-TYPE-THUNDERBIRD-EXTENSION`  
 **Status:** Active.  
 **Applies when:** Work creates, changes, reviews, packages, or releases a Thunderbird MailExtension, add-on, plugin, XPI archive, or native installer for one.  
-**Required pages:** `CORE-REPOSITORY-DISCOVERY`, `WORKFLOW-SEMANTIC-VERSIONING`, `WORKFLOW-GIT-COMMITS`, `WORKFLOW-CI-CD`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`, `QUALITY-LOCALIZATION`, `REPO-TYPE-THUNDERBIRD-BILINGUAL-DOCS`  
+**Required pages:** `CORE-REPOSITORY-DISCOVERY`, `WORKFLOW-SEMANTIC-VERSIONING`, `WORKFLOW-GIT-COMMITS`, `WORKFLOW-CI-CD`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`, `QUALITY-LOCALIZATION`, `REPO-TYPE-THUNDERBIRD-BILINGUAL-DOCS`, `REPO-TYPE-THUNDERBIRD-ATN-VALIDATION`  
 **Overrides:** None.  
-**Ruleset version:** `2.9.0`.  
-**Updated:** `2026-08-26`.  
+**Ruleset version:** `2.10.0`.  
+**Updated:** `2026-08-27`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Release boundary after implementation

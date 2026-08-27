@@ -5,7 +5,7 @@
 **Applies when:** Generating user-executed commands that open a text editor, or creating, changing, reviewing, or diagnosing scripts and interactive tools that select or launch an editor.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`  
 **Overrides:** None.  
-**Ruleset version:** `2.9.0`.  
+**Ruleset version:** `2.10.0`.  
 **Updated:** `2026-08-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 

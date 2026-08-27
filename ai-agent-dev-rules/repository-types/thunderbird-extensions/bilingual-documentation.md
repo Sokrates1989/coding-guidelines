@@ -5,7 +5,7 @@
 **Applies when:** Documentation is created, changed, reviewed, packaged, or published in a Thunderbird extension repository.  
 **Required pages:** `DOC-REPOSITORY-DOCUMENTATION`, `QUALITY-LOCALIZATION`  
 **Overrides:** None.  
-**Ruleset version:** `2.9.0`.  
+**Ruleset version:** `2.10.0`.  
 **Updated:** `2026-08-26`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 

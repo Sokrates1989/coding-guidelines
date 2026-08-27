@@ -5,7 +5,7 @@
 **Applies when:** Every AI-assisted software task that may inspect, create, modify, refactor, test, document, commit, build, publish, deploy, or review repository content.  
 **Required pages:** None.  
 **Overrides:** None.  
-**Ruleset version:** `2.9.0`.  
+**Ruleset version:** `2.10.0`.  
 **Updated:** `2026-08-26`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 

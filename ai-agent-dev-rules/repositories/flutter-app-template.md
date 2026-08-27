@@ -5,7 +5,7 @@
 **Applies when:** The normalized Git remote is `github.com/sokrates1989/flutter_app_template`.  
 **Required pages:** `REPO-TYPE-TEMPLATE`, `CORE-REPOSITORY-DISCOVERY`  
 **Overrides:** None.  
-**Ruleset version:** `2.9.0`.  
+**Ruleset version:** `2.10.0`.  
 **Updated:** `2026-08-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
