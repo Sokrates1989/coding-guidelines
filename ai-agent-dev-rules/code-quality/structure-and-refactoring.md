@@ -6,7 +6,7 @@
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Updated:** `2026-08-27`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Size metrics
@@ -44,6 +44,20 @@ For tightly coupled code, prefer:
 4. Create a separate file only when reuse, size, independent responsibility, tests, state, data contracts, or dependency boundaries justify it.
 
 Do not create many tiny files for fragments meaningful only inside one parent. Navigation cost is a design cost.
+
+## Lifecycle coordination
+
+- A lifecycle action with multiple coupled effects, such as cancelling
+  scheduling, persisted state, background work, and visible platform state,
+  SHOULD expose one named orchestration boundary used by every entry point.
+- The orchestration boundary SHOULD be idempotent and MUST define whether
+  cleanup is sequential, concurrent, best-effort, or fail-fast.
+- Keep platform, persistence, and UI cleanup primitives separate and
+  independently testable; the coordinator owns completeness and ordering, not
+  their internal implementation.
+- Do not introduce a generic lifecycle helper when the operations do not form
+  one cohesive state transition. Local, explicit code remains preferable for a
+  one-off sequence with no omission or reuse risk.
 
 ## Refactoring protocol
 
