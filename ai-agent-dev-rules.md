@@ -78,7 +78,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | Planned work | Load these pages |
 | --- | --- |
 | Comments, docstrings, file headers, JSX section comments, or undocumented code | [Comments and docstrings](ai-agent-dev-rules/documentation/comments-and-docstrings.md). Load its examples only when the format is unclear. |
-| README, architecture, setup, API, or companion documentation | [Repository documentation](ai-agent-dev-rules/documentation/repository-documentation.md). |
+| Plans, README, architecture, setup, API, or companion documentation | [Repository documentation](ai-agent-dev-rules/documentation/repository-documentation.md). |
 | User-facing text, messages, translations, or localization providers | [Localization and user-facing text](ai-agent-dev-rules/code-quality/localization.md). |
 | Large functions/files, extraction, modularization, or structural refactoring | [Structure and refactoring](ai-agent-dev-rules/code-quality/structure-and-refactoring.md). |
 | Tests, regressions, verification, or refactoring | [Testing](ai-agent-dev-rules/code-quality/testing.md). |
