@@ -6,7 +6,7 @@
 **Required pages:** `ROOT-ROUTER`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Updated:** `2026-09-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Mandatory behavior
@@ -27,13 +27,23 @@
 
 Instruction authority follows the root router's precedence model. Repository and path-specific instruction files are instructions, not merely evidence, and retain the scope assigned by the active agent platform.
 
-For factual questions about the repository, use evidence in this order:
+For factual questions about the current repository or system, use evidence in
+this order. The current request defines the required outcome, but repository
+claims still require verification against these sources:
 
-1. Current user request and explicit acceptance criteria.
-2. Current manifests, configuration, build scripts, CI workflows, schemas, tests, and generated-ownership records.
-3. Repository architecture documents and applicable exact-repository Wiki ownership or policy rules.
+1. Current manifests, configuration, schemas, tests, generated-ownership
+   records, deployment or runtime evidence, and actual implementation.
+2. The repository's authoritative current-state documentation, such as `docs/`
+   or an equivalent location defined by a more specific repository rule.
+3. Dated `investigations/` and archived plans, as supporting historical evidence
+   only.
 4. Nearby current implementation patterns.
-5. Generic language or framework defaults.
+5. Generic language or framework conventions.
+
+`temp/` is disposable and MUST NOT be treated as authoritative evidence. An
+investigation or archived plan MUST NOT override current implementation or
+authoritative current-state documentation merely because it is newer or more
+detailed.
 
 Existing code is evidence, not permission to perpetuate a known violation. When the repository and this ruleset disagree materially, report the discrepancy rather than silently choosing one.
 

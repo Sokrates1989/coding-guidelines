@@ -6,7 +6,7 @@
 **Required pages:** None.  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Updated:** `2026-09-10`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 
 ## Purpose
@@ -78,7 +78,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | Planned work | Load these pages |
 | --- | --- |
 | Comments, docstrings, file headers, JSX section comments, or undocumented code | [Comments and docstrings](ai-agent-dev-rules/documentation/comments-and-docstrings.md). Load its examples only when the format is unclear. |
-| Plans, README, architecture, setup, API, or companion documentation | [Repository documentation](ai-agent-dev-rules/documentation/repository-documentation.md). |
+| Plans, investigations, README, architecture, setup, API, or companion documentation | [Repository documentation](ai-agent-dev-rules/documentation/repository-documentation.md). |
 | User-facing text, messages, translations, or localization providers | [Localization and user-facing text](ai-agent-dev-rules/code-quality/localization.md). |
 | Large functions/files, extraction, modularization, or structural refactoring | [Structure and refactoring](ai-agent-dev-rules/code-quality/structure-and-refactoring.md). |
 | Tests, regressions, verification, or refactoring | [Testing](ai-agent-dev-rules/code-quality/testing.md). |
