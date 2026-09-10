@@ -1,6 +1,6 @@
 {
     "rulesetVersion":  "2.10.0",
-    "updated":  "2026-09-07",
+    "updated":  "2026-09-10",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
     "pages":  [
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1090
+                      "estimatedWords":  1091
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -112,10 +112,10 @@
                                        "CORE-VALIDATION-COMPLETION"
                                    ],
                       "loadWhen":  [
-                                       "Repository-level documentation is planned, changed, reviewed, or diagnosed.",
+                                       "Repository-level documentation, plans, or investigations are planned, changed, reviewed, or diagnosed.",
                                        "Public behavior or workflow changes require documentation."
                                    ],
-                      "estimatedWords":  492
+                      "estimatedWords":  779
                   },
                   {
                       "id":  "QUALITY-STRUCTURE-REFACTORING",
