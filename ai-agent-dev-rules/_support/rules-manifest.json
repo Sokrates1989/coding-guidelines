@@ -28,7 +28,7 @@
                       "loadWhen":  [
                                        "Every governed task."
                                    ],
-                      "estimatedWords":  414
+                      "estimatedWords":  479
                   },
                   {
                       "id":  "CORE-REPOSITORY-DISCOVERY",
@@ -115,7 +115,7 @@
                                        "Repository-level documentation, plans, or investigations are planned, changed, reviewed, or diagnosed.",
                                        "Public behavior or workflow changes require documentation."
                                    ],
-                      "estimatedWords":  779
+                      "estimatedWords":  846
                   },
                   {
                       "id":  "QUALITY-STRUCTURE-REFACTORING",

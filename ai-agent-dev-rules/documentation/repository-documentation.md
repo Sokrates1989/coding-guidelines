@@ -20,6 +20,14 @@
 
 ## Knowledge locations
 
+The paths below are the default convention. A more specific repository rule MAY
+define an equivalent authoritative location or structure; follow that convention
+instead of creating a competing `docs/` hierarchy. In every structure, keep one
+authoritative current-state documentation location, one active-plan location,
+clearly separated historical material, explicitly non-authoritative and
+potentially stale investigations, and disposable non-authoritative temporary
+material.
+
 - `plans/active/` contains active implementation plans describing what should
   become. Plans MUST NOT be treated as evidence of current implemented behavior.
   Completed plans move to `plans/archive/` and remain historical records rather
@@ -60,10 +68,12 @@ Use this flow while preserving evidence appropriate to each stage:
 
 ## Plans and implementation slices
 
-- Implementation plans MUST be written to `plans/active/` directly under the root of
-  the repository most affected by the work. A cross-repository plan MUST have
-  exactly one authoritative home there; other repositories link to it instead
-  of maintaining duplicate plans, status records, or acceptance checklists.
+- Unless a more specific repository rule defines an equivalent location,
+  implementation plans MUST be written to `plans/active/` directly under the
+  root of the repository most affected by the work. A cross-repository plan MUST
+  have exactly one authoritative home there; other repositories link to it
+  instead of maintaining duplicate plans, status records, or acceptance
+  checklists.
 - Every implementation plan MUST use ordered slices. Use as few slices as
   possible and as many as necessary for coherent architecture, focused commits,
   and meaningful testing or deployment checkpoints. Respect an operator's slice
