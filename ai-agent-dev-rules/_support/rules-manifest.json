@@ -1,6 +1,6 @@
 {
-    "rulesetVersion":  "2.10.0",
-    "updated":  "2026-09-07",
+    "rulesetVersion":  "2.11.0",
+    "updated":  "2026-09-10",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
     "pages":  [
@@ -115,7 +115,7 @@
                                        "Repository-level documentation is planned, changed, reviewed, or diagnosed.",
                                        "Public behavior or workflow changes require documentation."
                                    ],
-                      "estimatedWords":  492
+                      "estimatedWords":  874
                   },
                   {
                       "id":  "QUALITY-STRUCTURE-REFACTORING",

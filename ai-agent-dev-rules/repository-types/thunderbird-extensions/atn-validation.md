@@ -5,8 +5,8 @@
 **Applies when:** A Thunderbird extension is validated, packaged, released, or prepared for addons.thunderbird.net submission.  
 **Required pages:** `CORE-VALIDATION-COMPLETION`, `WORKFLOW-CI-CD`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`  
 **Overrides:** None.  
-**Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-27`.  
+**Ruleset version:** `2.11.0`.  
+**Updated:** `2026-09-10`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 
 ## Packaged validation

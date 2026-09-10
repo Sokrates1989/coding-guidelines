@@ -5,8 +5,8 @@
 **Applies when:** Implementing, changing, planning, reviewing, or diagnosing an automatic remote update check before command dispatch.  
 **Required pages:** `REPO-TYPE-BASH-CLI`, `BASH-CLI-LIFECYCLE`  
 **Overrides:** None.  
-**Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Ruleset version:** `2.11.0`.  
+**Updated:** `2026-09-10`.  
 **Root router:** [../../../ai-agent-dev-rules.md](../../../ai-agent-dev-rules.md).
 
 ## Safety objective

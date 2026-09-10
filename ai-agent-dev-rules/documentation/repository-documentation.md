@@ -5,8 +5,8 @@
 **Applies when:** Plans, README files, architecture documents, setup instructions, API documentation, migration guides, operational runbooks, or companion documents are created, changed, planned, reviewed, or diagnosed.
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
-**Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Ruleset version:** `2.11.0`.  
+**Updated:** `2026-09-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Source of truth
@@ -15,6 +15,28 @@
 - Commands, paths, environment variables, ports, routes, and file names MUST be verified against the repository.
 - Do not duplicate detailed rules or contracts already owned by another document; link to the canonical source.
 - Keep generated documentation and hand-maintained documentation clearly distinguished.
+
+## Knowledge lifecycle and directory conventions
+
+- `docs/` contains authoritative documentation of what the system currently IS. This is the single source of truth for current system behavior, architecture, contracts, deployment, security, and documented operational characteristics. When implementation, architecture, contracts, deployment, security, or documented behavior changes, relevant documentation in `docs/` MUST be updated in the same change or immediately following change.
+- `plans/active/` contains active implementation plans describing what SHOULD BECOME. These documents describe intended future work, not current state. Plans are working documents that may change as understanding evolves.
+- Completed plans move to `plans/archive/` and remain historical records. Archived plans MUST NOT be treated as authoritative current-state documentation. They preserve decision history and implementation evidence but do not describe the current system.
+- `investigations/` contains dated, point-in-time analysis, debugging evidence, hypotheses, corrected assumptions, and durable investigation checkpoints. These documents represent a snapshot of understanding at a specific time and may become stale. They MUST NOT be treated as current architectural truth.
+- For long AI-agent investigations, important findings SHOULD be persisted to `investigations/` before context compaction, handoff, or session changes can make them unreliable. Stable verified findings SHOULD eventually be reflected in `docs/`; actionable future work belongs in `plans/active/`.
+- `temp/` is disposable, non-authoritative working material. Files in `temp/` are normally ignored by Git and should not be used for persistent knowledge storage.
+- Agent entry-point files such as `AGENTS.md` or equivalent MUST remain concise maps to authoritative rules and documentation. They MUST NOT become large duplicated knowledge stores. Point to the canonical sources in `docs/` rather than duplicating content.
+
+## Knowledge lifecycle flow
+
+The durable documentation lifecycle follows this pattern:
+
+1. **Investigation** → findings are recorded in `investigations/` with clear dating and context
+2. **Current documentation or plan** → stable verified findings move to `docs/` (current state) or `plans/active/` (future work)
+3. **Implementation** → work follows an active plan; changes are made to code and configuration
+4. **Documentation update** → as implementation changes behavior, architecture, contracts, deployment, or security, the corresponding `docs/` entries are updated
+5. **Plan archive** → when a plan is completed, it moves to `plans/archive/` as historical record
+
+This lifecycle ensures that `docs/` always reflects the current system state, `plans/active/` describes agreed future work, `investigations/` preserves analysis context without becoming stale truth, and agent entry points remain navigable maps rather than knowledge duplications.
 
 ## Plans and implementation slices
 

@@ -5,8 +5,8 @@
 **Applies when:** A repository wraps generated, upstream, imported, or submodule code and adds authentication, APIs, deployment, configuration, assets, or production behavior without owning the upstream source.  
 **Required pages:** `CORE-CHANGE-SAFETY`, `CORE-REPOSITORY-DISCOVERY`  
 **Overrides:** None.  
-**Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Ruleset version:** `2.11.0`.  
+**Updated:** `2026-09-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Ownership boundary
