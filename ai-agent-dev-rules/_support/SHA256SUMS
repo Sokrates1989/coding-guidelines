@@ -5,7 +5,7 @@ b30f929f5ace01ade2b99ae752cc4d343b7bdc9487d7ac8467c6013a34425a8b  ai-agent-dev-r
 a7725dcdf8452c981c196fb21f9ef0e4e98c1b1fc04cfe1ebb298f302068bd3f  ai-agent-dev-rules/_support/llms.txt
 ad5910f3bf887f9dd6f7e6ff60380930a4ef6b187bc9badd5fef58240a65546f  ai-agent-dev-rules/_support/migration-map.md
 4f12832b0a53b3249cc73cc92babaa1331e7456a417ca7141c674fb9f62234fc  ai-agent-dev-rules/_support/README.md
-712d41bda587a4ea7414187b342136684e15daed6d09171a1cb6e6a729ee1dfd  ai-agent-dev-rules/_support/rules-manifest.json
+a38b9ccae7dbc3510a333164b50fbfddf58601461558f885d2318eef63edda3e  ai-agent-dev-rules/_support/rules-manifest.json
 353ee0ad2621dd471ebcc28f976ea780f6805091fd2b8809d5553e53544a5a61  ai-agent-dev-rules/_support/validation/validate-ruleset.py
 6124083d98f3f0c6510b0a96de16c87d285eacfe3056cf9702cc67239905b869  ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md
 bc37c2ef2a92412c5212e5e3d208e9fa5a418de1a0b9f838bf410f27233aac8d  ai-agent-dev-rules/code-quality/localization.md
@@ -45,7 +45,7 @@ fabf03a2f9db3cbda7e8b00fb4da9c30ebd5c9d9a9bd1d104020f5a5b33e5451  ai-agent-dev-r
 ccfe79e277e32a0d73b882a86a3f610437ce76d69ab0c372d8dc99aa92b0a5ae  ai-agent-dev-rules/repository-types/wrapper-repositories.md
 81e5e7782b50e402a5e5e074bddf5edace6d4e4d92f8cd32d1cf38346363a62c  ai-agent-dev-rules/workflows/ci-cd.md
 82e3b2b0d78947a4b4eb77eb0275c0fb8099321698324eb1324fc02b05e1a279  ai-agent-dev-rules/workflows/database-migrations.md
-0868fc3a585564de475b9a1345d356e0ab8b8a61ac9af2beb6f8f0cf20ea0a8d  ai-agent-dev-rules/workflows/git-commit-messages.md
+95ddda2e937a4f5e88584e4b9a8b0978d20d6bb9ea16c439a3195a66ebcb7dbc  ai-agent-dev-rules/workflows/git-commit-messages.md
 e7841074d127382ade7c6e9cc5ac03f34eb04aac81aac3d4f23ac960e6ce1a25  ai-agent-dev-rules/workflows/interactive-editor-selection.md
 eaf9bafed7af0c06deae2aa1e4950c9209f9d9ed10400a0f92d313771e02994a  ai-agent-dev-rules/workflows/semantic-versioning.md
 492d4041f3cce67a09ea9c48f305dfd68d150ad0378f5116de08b8e041fc14d8  README.md

@@ -548,7 +548,7 @@
                                        "Any task may change files in a Git worktree.",
                                        "Commit message, commit command, or staged-change review requested."
                                    ],
-                      "estimatedWords":  885
+                      "estimatedWords":  1090
                   },
                   {
                       "id":  "WORKFLOW-CI-CD",

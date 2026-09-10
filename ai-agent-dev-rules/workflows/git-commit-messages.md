@@ -6,7 +6,7 @@
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Updated:** `2026-09-10`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Mandatory local commits
@@ -40,17 +40,27 @@ Do not write a message from filenames alone when a relevant diff is available.
 Use:
 
 ```text
-[VERSION | JIRA-ID | Category] Area: concise summary
+[VERSION | WORK-ITEM | Category] Area: concise summary
 ```
 
 Include metadata only when verified:
 
-- No version or Jira ID: `[Category]`.
-- Jira ID only: `[JIRA-ID | Category]`.
+- No version or work item: `[Category]`.
+- Work item only: `[WORK-ITEM | Category]`.
 - Version only: `[VERSION | Category]`.
-- Both: `[VERSION | JIRA-ID | Category]`.
+- Both: `[VERSION | WORK-ITEM | Category]`.
 
-Never invent a version or Jira ID. When version metadata is requested or present, first load the [semantic-versioning rule](semantic-versioning.md). A staged authoritative version source MAY supply the version only when an applicable repository rule defines that behavior and the staged value was read. The commit message MUST match that value; it MUST NOT independently increment or calculate a version, and creating a commit alone MUST NOT trigger a bump.
+`WORK-ITEM` is one verified tracker reference, or a compact comma-separated set when the same coherent commit materially addresses several tracked items:
+
+- Use the established Jira identifier, such as `CORE-421`.
+- Use `#123` for an issue in the GitHub repository receiving the commit so GitHub links it automatically.
+- Use `owner/repository#123` when the referenced GitHub issue belongs to another repository.
+
+When the operator supplies a GitHub issue URL or number and the commit implements, fixes, documents, or otherwise materially advances that issue, the subject MUST include the verified issue reference. Every included reference MUST describe work in that commit; do not add issues that are merely related or discussed. If one coherent commit materially addresses several supplied issues, keep them in one metadata field, for example `[3.8.2 | #1, #3 | UI]`.
+
+A plain GitHub issue reference is the default because it provides traceability without changing issue state. Use `Fixes`, `Closes`, or another automatic-closing keyword only when full resolution and issue closure are explicitly in scope; place that keyword in the body or footer rather than the subject. Do not imply closure for prototypes, partial fixes, investigations, or requests awaiting reporter confirmation.
+
+Never invent a version, Jira ID, or GitHub issue reference. Verify the target repository before shortening a GitHub reference to `#123`. When version metadata is requested or present, first load the [semantic-versioning rule](semantic-versioning.md). A staged authoritative version source MAY supply the version only when an applicable repository rule defines that behavior and the staged value was read. The commit message MUST match that value; it MUST NOT independently increment or calculate a version, and creating a commit alone MUST NOT trigger a bump.
 
 Choose one primary category. Examples include `BugFix`, `New Feature`, `Refactoring`, `Documentation`, `Tests`, `Security`, `Performance`, `Setup`, `Env`, `Build`, `CI`, `Infra`, `UI`, `Navigation`, `Translation`, `Tooling`, and `CodeVersion`.
 
