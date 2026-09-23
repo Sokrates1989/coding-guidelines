@@ -6,12 +6,12 @@
 **Required pages:** None.  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-09-10`.  
+**Updated:** `2026-09-23`.  
 **Root router:** [Repository root](ai-agent-dev-rules.md).
 
 ## Purpose
 
-This canonical router contains only rule selection, precedence, and access instructions. Detailed standards live on narrowly scoped pages.
+This router selects task-scoped rules and defines precedence and access.
 
 **Do not load the complete ruleset.** Load only the pages selected by the procedure below. Re-evaluate the selection whenever the planned edit scope expands.
 
@@ -83,6 +83,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | Large functions/files, extraction, modularization, or structural refactoring | [Structure and refactoring](ai-agent-dev-rules/code-quality/structure-and-refactoring.md). |
 | Tests, regressions, verification, or refactoring | [Testing](ai-agent-dev-rules/code-quality/testing.md). |
 | Dependencies, lock files, public interfaces, or compatibility | [Dependencies and compatibility](ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md). |
+| Persisted data, data APIs, or offline/hybrid sync | [Persistence and synchronization](ai-agent-dev-rules/code-quality/persistence-and-sync.md). |
 | Version numbers, release identity, artifact names, tags, or commit-version metadata | [Semantic versioning](ai-agent-dev-rules/workflows/semantic-versioning.md). |
 | Python | [Python](ai-agent-dev-rules/languages/python.md). |
 | JavaScript or TypeScript | [JavaScript and TypeScript](ai-agent-dev-rules/languages/javascript-typescript.md). |

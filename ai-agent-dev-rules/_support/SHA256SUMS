@@ -1,14 +1,15 @@
 e92599ca26142cb0f7e5133ef7f52bcf711c12eea312b0ce6f3aa552a2be64e8  .gitattributes
 e69bde4eb538203dd5ad2578769d34f08753e15fc962f8ee0b0d0a828719f8f7  .gitignore
-8558a16508aef6683552019fc4242bc3fec83097b068142ab9247d78ec291e29  ai-agent-dev-rules.md
+46a4b25e2badcf89c13306fbf13cc1123694cb170e69741fca2783f80551423d  ai-agent-dev-rules.md
 b30f929f5ace01ade2b99ae752cc4d343b7bdc9487d7ac8467c6013a34425a8b  ai-agent-dev-rules/_support/codex/AGENTS.md
 a7725dcdf8452c981c196fb21f9ef0e4e98c1b1fc04cfe1ebb298f302068bd3f  ai-agent-dev-rules/_support/llms.txt
 ad5910f3bf887f9dd6f7e6ff60380930a4ef6b187bc9badd5fef58240a65546f  ai-agent-dev-rules/_support/migration-map.md
 4f12832b0a53b3249cc73cc92babaa1331e7456a417ca7141c674fb9f62234fc  ai-agent-dev-rules/_support/README.md
-a38b9ccae7dbc3510a333164b50fbfddf58601461558f885d2318eef63edda3e  ai-agent-dev-rules/_support/rules-manifest.json
+0e57e826f3d5f354819196608ded1fe7521778314621067eb8d866c84bbc60e1  ai-agent-dev-rules/_support/rules-manifest.json
 353ee0ad2621dd471ebcc28f976ea780f6805091fd2b8809d5553e53544a5a61  ai-agent-dev-rules/_support/validation/validate-ruleset.py
 6124083d98f3f0c6510b0a96de16c87d285eacfe3056cf9702cc67239905b869  ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md
 bc37c2ef2a92412c5212e5e3d208e9fa5a418de1a0b9f838bf410f27233aac8d  ai-agent-dev-rules/code-quality/localization.md
+fa8eded0bde3f510e9be6c995743ed76eeaec38c2f7720e51c7bd344cd1a0916  ai-agent-dev-rules/code-quality/persistence-and-sync.md
 1663215d84a4eaaf40db7e789940b768b7acee37afa1f98d34dc357e651e24d3  ai-agent-dev-rules/code-quality/structure-and-refactoring.md
 e7f6a7a02ac08a874cb6214848f68a714329cb32f7d3b23ff6f0731064813441  ai-agent-dev-rules/code-quality/testing.md
 ea52656a2643dbb0cccc3e4a88de1e7f0b5eee0f5db856638f25c351d98f8940  ai-agent-dev-rules/core/change-safety-and-scope.md

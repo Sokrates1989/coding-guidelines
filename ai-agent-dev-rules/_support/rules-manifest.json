@@ -1,6 +1,6 @@
 {
     "rulesetVersion":  "2.10.0",
-    "updated":  "2026-09-10",
+    "updated":  "2026-09-23",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
     "pages":  [
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1091
+                      "estimatedWords":  1098
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -167,6 +167,24 @@
                                        "Public interface or persisted format changes."
                                    ],
                       "estimatedWords":  233
+                  },
+                  {
+                      "id":  "QUALITY-PERSISTENCE-SYNC",
+                      "title":  "Persistence Ownership and Synchronization",
+                      "file":  "ai-agent-dev-rules/code-quality/persistence-and-sync.md",
+                      "type":  "normative",
+                      "requires":  [
+                                       "CORE-OPERATING-CONTRACT",
+                                       "CORE-CHANGE-SAFETY",
+                                       "CORE-VALIDATION-COMPLETION",
+                                       "QUALITY-TESTING",
+                                       "QUALITY-DEPENDENCIES-COMPATIBILITY"
+                                   ],
+                      "loadWhen":  [
+                                       "Persisted data, local stores, backend data APIs, drafts, attachments, settings, or recovery are affected.",
+                                       "Offline or hybrid synchronization is planned, changed, reviewed, or diagnosed."
+                                   ],
+                      "estimatedWords":  608
                   },
                   {
                       "id":  "QUALITY-LOCALIZATION",
