@@ -6,7 +6,7 @@
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`, `QUALITY-TESTING`, `QUALITY-DEPENDENCIES-COMPATIBILITY`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-09-23`.  
+**Updated:** `2026-09-24`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Decide data ownership before implementation
@@ -21,6 +21,12 @@ For every affected dataset and material field, identify the owner and intended p
 Record the expected behavior in each supported runtime mode (for example local-only, online, and hybrid), including offline availability, cross-device visibility, deletion, attachments, and conflict handling where relevant. Do not infer account scope solely from the existence of a backend endpoint, or device scope solely from an existing local table. Do not create a fake local endpoint for server-only data or send device-only data to the account service merely for symmetry.
 
 If the intended ownership or mode behavior could materially change the design and is not established, MUST ask the operator before implementing that storage contract. Ask a targeted question such as whether the data follows the account across devices, remains on this device, or exists only on the server. Clarify offline availability, conflict decisions, and attachment handling when they affect the result. Continue safe read-only investigation and independent in-scope work while awaiting the answer; do not silently choose synchronization semantics.
+
+## Interface-only persistence boundary
+
+Persisted data SHOULD be accessed through a typed, interface-defined capability owned by the feature or a reusable package. When the repository declares an interface-only persistence standard or supports multiple providers/runtime modes, production reads, writes, and deletes MUST cross that boundary. UI, domain, and orchestration code depend on the interface; only concrete adapters implementing it may call raw storage or persistent remote APIs. This includes SharedPreferences, browser localStorage, secure storage, Hive/Drift, files, backend HTTP persistence calls, and server database clients. A local-only or server-only dataset still has one appropriate interface boundary; it does not need an artificial second store. Preserve owner scoping, revisions, transactions, tombstones, and attachment semantics in the contract where relevant.
+
+Reuse and extend suitable package contracts, including AI-chat storage, rather than creating competing app-specific abstractions. Package consumers supply platform adapters through injection. Under a declared interface-only standard, existing direct access is migration debt, not evidence of an exception: new code MUST NOT add another bypass, and touched legacy paths must be migrated or assigned a bounded migration dependency. Database migrations and isolated test fixtures may use raw storage under their own safety rules. Do not claim repository-wide compliance until a complete production-source inventory and an automated adapter-boundary check find no unapproved bypasses.
 
 ## Verify the complete path, not just an interface
 

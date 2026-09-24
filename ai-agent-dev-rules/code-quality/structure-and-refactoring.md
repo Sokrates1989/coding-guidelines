@@ -6,7 +6,7 @@
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-27`.  
+**Updated:** `2026-09-24`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Size metrics
@@ -44,6 +44,12 @@ For tightly coupled code, prefer:
 4. Create a separate file only when reuse, size, independent responsibility, tests, state, data contracts, or dependency boundaries justify it.
 
 Do not create many tiny files for fragments meaningful only inside one parent. Navigation cost is a design cost.
+
+## Reusable capability interfaces
+
+When multiple apps, packages, platforms, or interchangeable providers use the same capability, SHOULD define a small typed interface or protocol in the package that owns its semantics. Consumers depend on that contract; concrete implementations are injected at the composition boundary. Prefer this pattern for AI-chat history and provider transport, durable storage, remote data access, notifications, and similarly reusable external capabilities. Supply a test implementation or fake and contract tests when practical.
+
+An interface MUST describe domain operations, ownership, failure behavior, and relevant lifecycle guarantees rather than merely rename SDK methods. Reuse an existing suitable contract before adding another. Do not force unrelated key-value, binary, transactional, and change-feed behavior into one generic CRUD interface, or add an interface for a one-off internal helper with no meaningful boundary. For persisted data, follow [Persistence ownership and synchronization](persistence-and-sync.md), which sets the stronger storage boundary.
 
 ## Lifecycle coordination
 

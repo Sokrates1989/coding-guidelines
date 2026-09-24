@@ -1,6 +1,6 @@
 {
     "rulesetVersion":  "2.10.0",
-    "updated":  "2026-09-23",
+    "updated":  "2026-09-24",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
     "pages":  [
@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1098
+                      "estimatedWords":  1097
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -130,9 +130,10 @@
                       "loadWhen":  [
                                        "File/function thresholds are approached.",
                                        "Extraction or modularization is planned.",
+                                       "Reusable cross-app or cross-platform capability interfaces are planned or changed.",
                                        "Refactoring task."
                                    ],
-                      "estimatedWords":  487
+                      "estimatedWords":  632
                   },
                   {
                       "id":  "QUALITY-TESTING",
@@ -184,7 +185,7 @@
                                        "Persisted data, local stores, backend data APIs, drafts, attachments, settings, or recovery are affected.",
                                        "Offline or hybrid synchronization is planned, changed, reviewed, or diagnosed."
                                    ],
-                      "estimatedWords":  608
+                      "estimatedWords":  817
                   },
                   {
                       "id":  "QUALITY-LOCALIZATION",
