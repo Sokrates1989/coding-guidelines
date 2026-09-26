@@ -26,6 +26,13 @@
 - Existing files above a size threshold do not automatically authorize a full refactor during an unrelated fix.
 - When a required fix would expand beyond the requested or approved approach into a risky or broad migration, MUST stop and explain the smallest safe options. An already approved migration MAY continue through its planned milestones under the applicable safety rules.
 
+## Repository-root placement
+
+- Before adding a tracked top-level path or changing a tool to write at the root, MUST inspect the existing root, the path's owner, and repository-defined locations. Put feature-specific code, configuration, assets, and documentation under their established owner directories. Reserve new root paths for repository-wide boundaries or entry points that cannot reasonably live under an existing directory.
+- A new root path MUST have a clear owner and purpose. Document its placement in the repository structure guide when that purpose is not obvious. Avoid parallel names for the same concern, such as `plan/` beside `plans/`.
+- Put disposable output in the repository's ignored temporary or cache location where the tool permits it. MUST NOT track scratch material or add a new root output directory merely for one task.
+- Before moving an existing root path, MUST trace code, build, deployment, test, documentation, and external path contracts; update affected consumers in the same change and preserve user data. A shorter root listing alone does not justify breaking an established path.
+
 ## Secrets and sensitive data
 
 - MUST NOT expose, log, paste, commit, or echo secrets, private keys, access tokens, passwords, production connection strings, or complete private environment files.

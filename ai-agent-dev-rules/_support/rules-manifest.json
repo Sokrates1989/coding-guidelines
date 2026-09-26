@@ -57,7 +57,7 @@
                       "loadWhen":  [
                                        "Any edit or side-effecting command."
                                    ],
-                      "estimatedWords":  415
+                      "estimatedWords":  582
                   },
                   {
                       "id":  "CORE-VALIDATION-COMPLETION",
