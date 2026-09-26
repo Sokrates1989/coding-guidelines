@@ -6,7 +6,7 @@
 **Required pages:** `ROOT-ROUTER`, `CORE-OPERATING-CONTRACT`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Updated:** `2026-09-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Validation selection
@@ -16,6 +16,20 @@
 - Run a baseline before a refactor when it is necessary to distinguish pre-existing failures from introduced failures.
 - Do not run destructive, production-connected, credential-requiring, unusually expensive, or externally publishing checks without authorization.
 - Validate documentation links, configuration syntax, generated ownership, migrations, routes, and deployment manifests when those areas change.
+
+## Milestone validation
+
+For work organized into milestones, define boundaries that can be meaningfully
+validated. After each implementation milestone, MUST run the smallest available
+relevant checks before dependent work proceeds. Fix introduced failures. If a
+check cannot run or automated checks cannot cover the result, record what
+remains unverified. Apply the escalation rule if the uncertainty blocks safe
+continuation. Do not mark a milestone validated from an unrun check.
+
+Run broader repository-required checks at the point they can reveal consequential
+integration problems and before completion. Manual verification is required at
+an intermediate point only when an agreed checkpoint or a material decision
+depends on human observation; retain any required final manual acceptance.
 
 ## Validation tiers
 

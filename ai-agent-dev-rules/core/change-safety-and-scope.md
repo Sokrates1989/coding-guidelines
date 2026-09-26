@@ -6,7 +6,7 @@
 **Required pages:** `ROOT-ROUTER`, `CORE-OPERATING-CONTRACT`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-08-26`.  
+**Updated:** `2026-09-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Preserve existing work
@@ -24,7 +24,7 @@
 - Apply current standards to new and materially modified code.
 - Report larger pre-existing problems separately unless they block the requested change.
 - Existing files above a size threshold do not automatically authorize a full refactor during an unrelated fix.
-- When a required fix would expand into a risky or broad migration, stop and explain the smallest safe options.
+- When a required fix would expand beyond the requested or approved approach into a risky or broad migration, MUST stop and explain the smallest safe options. An already approved migration MAY continue through its planned milestones under the applicable safety rules.
 
 ## Secrets and sensitive data
 
@@ -47,4 +47,4 @@ Before commands that can alter databases, containers, remote branches, registrie
 1. Confirm the command is necessary for the current task.
 2. Identify its target environment.
 3. Prefer a plan, diff, dry-run, or read-only command first.
-4. Require explicit authorization for destructive, paid, production, or externally visible actions.
+4. Require explicit authorization for destructive, paid, production, or externally visible actions. Prior explicit authorization covering the action satisfies this requirement.

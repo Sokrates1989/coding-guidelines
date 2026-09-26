@@ -1,6 +1,6 @@
 {
     "rulesetVersion":  "2.10.0",
-    "updated":  "2026-09-24",
+    "updated":  "2026-09-26",
     "canonicalRepository":  "https://github.com/sokrates1989/coding-guidelines",
     "rootFile":  "ai-agent-dev-rules.md",
     "pages":  [
@@ -28,7 +28,7 @@
                       "loadWhen":  [
                                        "Every governed task."
                                    ],
-                      "estimatedWords":  479
+                      "estimatedWords":  826
                   },
                   {
                       "id":  "CORE-REPOSITORY-DISCOVERY",
@@ -57,7 +57,7 @@
                       "loadWhen":  [
                                        "Any edit or side-effecting command."
                                    ],
-                      "estimatedWords":  384
+                      "estimatedWords":  415
                   },
                   {
                       "id":  "CORE-VALIDATION-COMPLETION",
@@ -71,7 +71,7 @@
                       "loadWhen":  [
                                        "Every completed change or review."
                                    ],
-                      "estimatedWords":  383
+                      "estimatedWords":  494
                   },
                   {
                       "id":  "DOC-COMMENTS-DOCSTRINGS",
@@ -115,7 +115,7 @@
                                        "Repository-level documentation, plans, or investigations are planned, changed, reviewed, or diagnosed.",
                                        "Public behavior or workflow changes require documentation."
                                    ],
-                      "estimatedWords":  846
+                      "estimatedWords":  972
                   },
                   {
                       "id":  "QUALITY-STRUCTURE-REFACTORING",
@@ -133,7 +133,7 @@
                                        "Reusable cross-app or cross-platform capability interfaces are planned or changed.",
                                        "Refactoring task."
                                    ],
-                      "estimatedWords":  632
+                      "estimatedWords":  654
                   },
                   {
                       "id":  "QUALITY-TESTING",
@@ -567,7 +567,7 @@
                                        "Any task may change files in a Git worktree.",
                                        "Commit message, commit command, or staged-change review requested."
                                    ],
-                      "estimatedWords":  1090
+                      "estimatedWords":  1146
                   },
                   {
                       "id":  "WORKFLOW-CI-CD",

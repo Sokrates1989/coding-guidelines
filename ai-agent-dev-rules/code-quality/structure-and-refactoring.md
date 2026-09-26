@@ -6,7 +6,7 @@
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `DOC-COMMENTS-DOCSTRINGS`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-09-24`.  
+**Updated:** `2026-09-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Size metrics
@@ -23,7 +23,7 @@
 | Commentable configuration | 160 | 280 | 350 | 550 |
 | Non-commentable data | 160 | 280 | 250 | 400 |
 
-A target threshold triggers a structural review. A hard threshold prohibits adding further unrelated complexity without a documented extraction plan. An existing oversized file does not authorize broad refactoring during an unrelated task.
+A target threshold triggers a structural review. A hard threshold prohibits adding further unrelated complexity without a documented extraction approach. The approach MAY be concise task notes; the core planning risk criteria determine whether a durable plan and operator approval are required. An existing oversized file does not authorize broad refactoring during an unrelated task.
 
 Generated files, migrations, schemas, fixtures, translations, snapshots, declarative mappings, and tool-owned outputs require explicit repository-specific interpretation. Never delete useful documentation to reduce physical line count.
 

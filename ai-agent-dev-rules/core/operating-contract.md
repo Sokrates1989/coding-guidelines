@@ -6,7 +6,7 @@
 **Required pages:** `ROOT-ROUTER`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
-**Updated:** `2026-09-10`.  
+**Updated:** `2026-09-26`.  
 **Root router:** [../../ai-agent-dev-rules.md](../../ai-agent-dev-rules.md).
 
 ## Mandatory behavior
@@ -22,6 +22,50 @@
 - When files change in a Git worktree, MUST follow the [Git commit workflow](../workflows/git-commit-messages.md), including its mandatory local-commit boundary and staging restrictions.
 - MUST NOT push, publish, deploy, delete remote data, or modify production resources unless explicitly requested.
 - MUST stop and report a conflict when equally specific applicable rules cannot be reconciled.
+
+## Planning and autonomous execution
+
+Planning effort MUST scale with task complexity, risk, ambiguity, architectural
+impact, blast radius, and reversibility:
+
+- A clear, contained, low-risk change needs no separate implementation plan. The
+  agent MAY inspect, implement, validate, and report it directly.
+- For bounded multi-step work with an established approach, the agent MAY use a
+  concise internal or conversational plan and implement it without a plan
+  approval gate. Use a durable repository plan when duration, handoff, or
+  coordination warrants one.
+- For work with significant architectural or security impact, data risk,
+  difficult rollback, a high blast radius, or materially different approaches
+  with unresolved trade-offs, the agent MUST prepare a reviewable durable plan
+  and obtain operator approval of the material approach before dependent
+  implementation. An explicit request or existing approved decision that
+  already settles that approach satisfies this gate. Task size alone does not
+  require approval. Major architecture or API redesign, authorization changes,
+  risky schema migrations, large refactors, and deployment infrastructure
+  changes commonly warrant this review.
+
+When no approval is needed or the approach is approved, the agent MUST continue
+through coherent, validated milestones without asking whether to continue after
+each one. A milestone is an implementation and validation boundary, not an
+automatic human, commit, or deployment checkpoint. Plan approval does not
+authorize destructive, paid, production, or externally visible actions; apply
+their separate authorization rules.
+
+## Escalation during execution
+
+MUST stop dependent work and ask a targeted question when repository evidence
+cannot resolve materially ambiguous or conflicting requirements, a consequential
+design trade-off remains unassigned, the approved approach becomes unworkable,
+security or data-handling implications are unclear, scope expands into an
+unapproved risky change, or required information, credentials, or authorization
+are unavailable. A material conflict between applicable rules also requires a
+stop. When required validation fails or is unavailable, first determine whether
+the problem can be fixed or the limitation can be safely reported; stop
+dependent work if correctness or required acceptance cannot be established.
+
+Continue safe independent investigation and in-scope work while awaiting an
+answer. Routine implementation choices, recoverable test failures, and the end
+of a milestone do not by themselves require operator input.
 
 ## Repository evidence order
 
