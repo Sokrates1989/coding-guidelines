@@ -29,9 +29,11 @@
 ## Repository-root placement
 
 - Before adding a tracked top-level path or changing a tool to write at the root, MUST inspect the existing root, the path's owner, and repository-defined locations. Put feature-specific code, configuration, assets, and documentation under their established owner directories. Reserve new root paths for repository-wide boundaries or entry points that cannot reasonably live under an existing directory.
+- Apply this placement test to individual files as well as folders. Keep tool-discovered metadata, deliberate public launchers, and repository-wide contracts at the root; place machine policies, fixtures, historical material, and feature files with their owning subsystem when no root path contract requires them.
 - A new root path MUST have a clear owner and purpose. Document its placement in the repository structure guide when that purpose is not obvious. Avoid parallel names for the same concern, such as `plan/` beside `plans/`.
 - Put disposable output in the repository's ignored temporary or cache location where the tool permits it. MUST NOT track scratch material or add a new root output directory merely for one task.
 - Before moving an existing root path, MUST trace code, build, deployment, test, documentation, and external path contracts; update affected consumers in the same change and preserve user data. A shorter root listing alone does not justify breaking an established path.
+- During a requested root audit, MUST distinguish tool-required paths, deliberate compatibility or user-facing paths, and ignored local output. Record which remaining paths can move with a small reference update and which need a broader migration. Persistent local preferences MUST NOT be silently discarded or moved into disposable temporary storage.
 
 ## Secrets and sensitive data
 
