@@ -440,7 +440,7 @@
                       "loadWhen":  [
                                        "Secrets, image publication, deployment, rollback, or production operations."
                                    ],
-                      "estimatedWords":  286
+                      "estimatedWords":  457
                   },
                   {
                       "id":  "REPO-TYPE-WRAPPER",

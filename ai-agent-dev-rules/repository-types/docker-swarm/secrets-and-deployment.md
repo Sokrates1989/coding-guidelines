@@ -23,6 +23,13 @@
 - Do not make CI publish images when the exact repository reserves publication for an operator-controlled quick-start flow.
 - Do not leak build secrets into image layers or logs.
 
+## Multi-site release isolation
+
+- Treat each deployment checkout and stack as an independent target, even when they use the same application profile. Check that a site release changes only its own image references, version floors, and release evidence unless shared changes are explicitly in scope.
+- Scope site-specific paths, flags, and directory changes in operator instructions to one command or a subshell. Verify the caller's working directory and environment after the documented command exits.
+- Bind automatic and inherited overrides to the active deployment checkout and stack. Ignore an inherited override for another deployment. Validate an intentional override for the active deployment before using it. Require an explicit, target-validated selection for an external backup.
+- Before committing release instructions or changing a shared deployment workflow, exercise the documented target command and a second site's affected planning or update path in the same shell with isolated fixtures. Include a stale target override and verify the other site selects its own saved configuration and version metadata. Cover separate test and production checkouts when they share a profile.
+
 ## Deployment safety
 
 Before production deployment:
