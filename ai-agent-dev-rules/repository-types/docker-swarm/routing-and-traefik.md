@@ -25,6 +25,21 @@ Verify host rules, path rules, router priority, entrypoints, forwarded protocol,
 
 ## Dedicated API domains
 
+New public Swarm APIs MUST use a dedicated DNS hostname by default, such as
+`api.example.com` or `api.site.example.com`. A new deployment that exposes
+an existing API publicly follows the same rule. Configure the hostname in
+the deployment profile and confirm that its DNS record targets the intended
+ingress. Use an explicit Traefik HTTPS `Host` rule for the API service. Wire
+clients that call the dedicated host to its HTTPS base URL and configure
+CORS for the approved browser origins when the requests are cross-origin.
+
+Same-host routing requires an explicit operator decision or a documented
+gateway or compatibility contract. Keep private-only APIs on the internal
+network. On a dedicated API host, expose only the intended public paths and
+methods. Keep administration and internal endpoints behind their own access
+controls. Verify the external hostname, the intended route, and any required
+browser preflight as part of deployment acceptance.
+
 When a service is already reached through its own API hostname, such as `api.example.com`, and the frontend base URL already includes that hostname, application routes MUST NOT add a redundant `/api` prefix unless an external compatibility contract requires it.
 
 Prefer:
