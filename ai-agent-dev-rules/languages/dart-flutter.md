@@ -26,6 +26,13 @@
 - Preserve navigation, lifecycle, focus, accessibility, and platform behavior.
 - Use the repository’s established state-management pattern; do not introduce another one for a small feature.
 
+## Shared switch controls
+
+- Flutter application and shared-package code MUST render on/off switches through the repository's shared switch and switch tile. Create them in the shared UI package if they do not exist. In repositories that use `app_ui`, use `AppSettingsSwitch` or `AppSettingsSwitchTile`.
+- Do not use Flutter's `Switch`, `Switch.adaptive`, `SwitchListTile`, `SwitchListTile.adaptive`, or `CupertinoSwitch`. This also applies to the shared implementation. Migrate existing native switches when changing their controls.
+- The shared control MUST paint a visibly contrasting thumb at rest in on, off, and disabled states in both light and dark themes. Hover and focus may add feedback. Preserve labelled switch semantics, keyboard and touch operation, and directional layout.
+- Add an automated source check that rejects direct native switch construction in the covered production code. Run it in the regular quality gate. Test the rendered thumb at rest without sending pointer events so hover feedback cannot mask a missing thumb.
+
 ## Generated files and identity
 
 Do not edit generated Dart, localization output, platform registrants, build output, or creator-owned files directly. Update the owning input or generator and regenerate through the documented workflow. Preserve Android package identity, iOS bundle identity, and app ownership contracts.

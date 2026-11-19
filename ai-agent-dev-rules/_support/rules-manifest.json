@@ -286,7 +286,7 @@
                       "loadWhen":  [
                                        "Planned or reviewed files include Dart, Flutter, `pubspec.yaml`, or Flutter platform configuration."
                                    ],
-                      "estimatedWords":  310
+                      "estimatedWords":  460
                   },
                   {
                       "id":  "REPO-TYPE-BASH-CLI",
