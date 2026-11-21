@@ -167,7 +167,7 @@
                                        "New dependency.",
                                        "Public interface or persisted format changes."
                                    ],
-                      "estimatedWords":  233
+                      "estimatedWords":  392
                   },
                   {
                       "id":  "QUALITY-PERSISTENCE-SYNC",
@@ -412,7 +412,7 @@
                       "loadWhen":  [
                                        "Traefik, API paths, or reverse-proxy routing changes."
                                    ],
-                      "estimatedWords":  341
+                      "estimatedWords":  490
                   },
                   {
                       "id":  "SWARM-STACK-STRUCTURE",

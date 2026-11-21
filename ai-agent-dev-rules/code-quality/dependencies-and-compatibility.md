@@ -28,6 +28,14 @@ Routine imports do not need to be repeated in every docstring. Document only non
 - Keep types, schemas, validation, documentation, and tests synchronized.
 - Do not change a default silently when existing users can observe it.
 
+## API administrator message status
+
+Every API MUST offer an anonymous, read-only endpoint discoverable from its root or API documentation. Report whether administrator incident messages are enabled, the effective channels (including email and Telegram where supported), and delivery evidence per channel. Distinguish disabled, configured but unverified, provider acceptance, and failed or unavailable evidence. Include the observation time for a reported delivery result. A status read MUST NOT send a message.
+
+The public response MUST use an explicit field allowlist. Keep recipients, addresses, chat IDs, provider configuration, raw errors and credentials out of public responses, logs and examples. Expose recipient details only to authenticated administrators of the API's own Keycloak realm, validating issuer, intended audience and administrator role. Never return credentials even to administrators. For APIs without realm-admin authorization, omit private details until that protection exists.
+
+Test anonymous visibility, effective channel settings, failure and success evidence, and denial of recipient access for anonymous callers, ordinary users and administrators from another realm.
+
 ## Configuration
 
 Keep raw configuration loading separate from parsing and domain transformation when the repository defines that boundary. Validate values before side effects. Never place secrets or environment-specific values into tracked defaults.

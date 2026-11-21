@@ -1,13 +1,13 @@
 e92599ca26142cb0f7e5133ef7f52bcf711c12eea312b0ce6f3aa552a2be64e8  .gitattributes
 e69bde4eb538203dd5ad2578769d34f08753e15fc962f8ee0b0d0a828719f8f7  .gitignore
-048c11a085ea34b728547f15f60f02c12faaaa23ec91565b2b6ffe2dc9f78a32  ai-agent-dev-rules.md
+52ce5098822bea35de82e70b593b82f47ec0e3c83ca39b7d38d550fefc292247  ai-agent-dev-rules.md
 b30f929f5ace01ade2b99ae752cc4d343b7bdc9487d7ac8467c6013a34425a8b  ai-agent-dev-rules/_support/codex/AGENTS.md
 a7725dcdf8452c981c196fb21f9ef0e4e98c1b1fc04cfe1ebb298f302068bd3f  ai-agent-dev-rules/_support/llms.txt
 ad5910f3bf887f9dd6f7e6ff60380930a4ef6b187bc9badd5fef58240a65546f  ai-agent-dev-rules/_support/migration-map.md
 4f12832b0a53b3249cc73cc92babaa1331e7456a417ca7141c674fb9f62234fc  ai-agent-dev-rules/_support/README.md
-1782dc1cdaf80167ba1284f02aefa085f4ee071302a3ee39fe6ef7cc517f3acf  ai-agent-dev-rules/_support/rules-manifest.json
+2eae4b7cc4279c8a76797c51ce74cc566dd7abcdf14b895506048119929c4419  ai-agent-dev-rules/_support/rules-manifest.json
 353ee0ad2621dd471ebcc28f976ea780f6805091fd2b8809d5553e53544a5a61  ai-agent-dev-rules/_support/validation/validate-ruleset.py
-6124083d98f3f0c6510b0a96de16c87d285eacfe3056cf9702cc67239905b869  ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md
+bbdc62591b98cadbb59bea0796a8449d878f325a441e95c848413ed1f86603f5  ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md
 bc37c2ef2a92412c5212e5e3d208e9fa5a418de1a0b9f838bf410f27233aac8d  ai-agent-dev-rules/code-quality/localization.md
 f74c7bdfbf9a78a6f50a8b0d9fb049791288ae6397f1ff15ecc6360a74b1501e  ai-agent-dev-rules/code-quality/persistence-and-sync.md
 50f59a8351eba43e8e6bfc3cc72d363c9fb9b23288a394724f5dfeec71557862  ai-agent-dev-rules/code-quality/structure-and-refactoring.md
@@ -20,7 +20,7 @@ fa1c59903ca42e26a7a5a0bde12ec5b95144bc65f04d9670dac358f8289b888a  ai-agent-dev-r
 428ce723686bea81222f1fa74cea7df1f5d88b6e96f15853840af7b464204445  ai-agent-dev-rules/documentation/comments-and-docstrings/examples.md
 5b6376a5f83752e2aec16e59f34b57336f71f453829f8c018f4ed1893a37fe30  ai-agent-dev-rules/documentation/repository-documentation.md
 c9cc1976354520bbebcbba24dcb9c6c672698607b22f8a99f17be521a73ca15c  ai-agent-dev-rules/languages/bash.md
-d620d850751fbc4137b31c03f74bed1b2c5d03d82787e6edec82c1ed1e051b97  ai-agent-dev-rules/languages/dart-flutter.md
+9a0dee5d3be6b218c7474279b1cfa9be13c4a4e5318b7e64f83969c50ea9f408  ai-agent-dev-rules/languages/dart-flutter.md
 a26ca687016e35c7534835784134185d0e7e465d1222042c45093467cb8e7a15  ai-agent-dev-rules/languages/javascript-typescript.md
 4259af5437b7034f7839e5918d2dd9b45beb31f95926235c67f51e1ee1a12acb  ai-agent-dev-rules/languages/powershell.md
 44867168188c7e3f2169cc1451f6c93131d7117330bfa2066b6f96eed4b13a1e  ai-agent-dev-rules/languages/python.md
@@ -36,7 +36,7 @@ e49a6862c719158eaab3424375d905ca956189d1bdd9ec67e0ff448f784d704e  ai-agent-dev-r
 a224d099ea0dd7ac7e5840230eae568a5a7060c12a9d01330079908bcb13f066  ai-agent-dev-rules/repository-types/bash-cli-tools/testing.md
 e2c62995f8c2dba2e5fed35f26f9838b475b702e2cc7b507ac1c57b38d44139c  ai-agent-dev-rules/repository-types/bash-cli-tools/versioning.md
 7534d5c914d67f394b47bca0162da1b6f15757d5be4c545c168fdab75dd3ae5a  ai-agent-dev-rules/repository-types/docker-swarm.md
-9a47cba846b3b0370bb50655ea10b3590b2dcd847222285ac3d7c1b9424a66d6  ai-agent-dev-rules/repository-types/docker-swarm/routing-and-traefik.md
+01ca9dc88ac9639edff16ffa12890006310332b1e5bc1f061ef07b8dba233b77  ai-agent-dev-rules/repository-types/docker-swarm/routing-and-traefik.md
 e52b15fa3e7699a0cc08f88cd6325a66fd9d3a60c59b0f0474150ecffc218809  ai-agent-dev-rules/repository-types/docker-swarm/secrets-and-deployment.md
 e29348f78eeff8ff91559ebc793a100319df5b9f760688c14aab08b90d68582f  ai-agent-dev-rules/repository-types/docker-swarm/stack-structure.md
 a53b7f7db4f6601288951c881cbe79106c30eaadfba62c5310d9f207e44e988d  ai-agent-dev-rules/repository-types/template-repositories.md
