@@ -51,6 +51,10 @@ automatic human, commit, or deployment checkpoint. Plan approval does not
 authorize destructive, paid, production, or externally visible actions; apply
 their separate authorization rules.
 
+Before starting or resuming an implementation plan, apply the
+[execution model check](../documentation/repository-documentation.md#execution-model-check)
+to the current executor and milestone.
+
 ## Escalation during execution
 
 MUST stop dependent work and ask a targeted question when repository evidence

@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1100
+                      "estimatedWords":  1098
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -28,7 +28,7 @@
                       "loadWhen":  [
                                        "Every governed task."
                                    ],
-                      "estimatedWords":  826
+                      "estimatedWords":  848
                   },
                   {
                       "id":  "CORE-REPOSITORY-DISCOVERY",
@@ -112,10 +112,11 @@
                                        "CORE-VALIDATION-COMPLETION"
                                    ],
                       "loadWhen":  [
-                                       "Repository-level documentation, plans, or investigations are planned, changed, reviewed, or diagnosed.",
+                                       "Repository documentation, plans, or investigations are created, changed, reviewed, or diagnosed.",
+                                       "An implementation plan is started or resumed.",
                                        "Public behavior or workflow changes require documentation."
                                    ],
-                      "estimatedWords":  972
+                      "estimatedWords":  1364
                   },
                   {
                       "id":  "QUALITY-STRUCTURE-REFACTORING",
