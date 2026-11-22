@@ -82,7 +82,7 @@ Repository instructions need not cite a ruleset Rule ID. A ruleset page override
 | User-facing text, messages, translations, or localization providers | [Localization and user-facing text](ai-agent-dev-rules/code-quality/localization.md). |
 | Large functions/files, extraction, modularization, reusable capabilities, or structural refactoring | [Structure and refactoring](ai-agent-dev-rules/code-quality/structure-and-refactoring.md). |
 | Tests, regressions, verification, or refactoring | [Testing](ai-agent-dev-rules/code-quality/testing.md). |
-| APIs, dependencies, lock files, interfaces, or compatibility | [Dependencies and compatibility](ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md). |
+| APIs, dependencies, lock files, interfaces, compatibility, or local identity providers | [Dependencies and compatibility](ai-agent-dev-rules/code-quality/dependencies-and-compatibility.md). |
 | Persisted data, data APIs, or offline/hybrid sync | [Persistence and synchronization](ai-agent-dev-rules/code-quality/persistence-and-sync.md). |
 | Version numbers, release identity, artifact names, tags, or commit-version metadata | [Semantic versioning](ai-agent-dev-rules/workflows/semantic-versioning.md). |
 | Python | [Python](ai-agent-dev-rules/languages/python.md). |

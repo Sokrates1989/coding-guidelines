@@ -15,7 +15,7 @@
                       "loadWhen":  [
                                        "Always load first."
                                    ],
-                      "estimatedWords":  1097
+                      "estimatedWords":  1100
                   },
                   {
                       "id":  "CORE-OPERATING-CONTRACT",
@@ -165,9 +165,10 @@
                       "loadWhen":  [
                                        "Manifest or lock file changes.",
                                        "New dependency.",
-                                       "Public interface or persisted format changes."
+                                       "Public interface or persisted format changes.",
+                                       "Local identity provider changes."
                                    ],
-                      "estimatedWords":  392
+                      "estimatedWords":  490
                   },
                   {
                       "id":  "QUALITY-PERSISTENCE-SYNC",

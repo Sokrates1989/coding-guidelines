@@ -2,7 +2,7 @@
 
 **Rule ID:** `QUALITY-DEPENDENCIES-COMPATIBILITY`  
 **Status:** Active.  
-**Applies when:** Dependencies, package manifests, lock files, public interfaces, version constraints, or compatibility behavior may change.  
+**Applies when:** Dependencies, package manifests, lock files, public interfaces, version constraints, compatibility behavior, or local identity providers may change.  
 **Required pages:** `CORE-OPERATING-CONTRACT`, `CORE-CHANGE-SAFETY`, `CORE-VALIDATION-COMPLETION`  
 **Overrides:** None.  
 **Ruleset version:** `2.10.0`.  
@@ -19,6 +19,18 @@
 - Report every new direct dependency and why it is needed.
 
 Routine imports do not need to be repeated in every docstring. Document only non-obvious architectural, runtime, optional, or externally provisioned dependencies.
+
+## Shared local Keycloak
+
+- Development, demos, and manual acceptance MUST use one persistent shared
+  Keycloak service per local environment. App startup MUST reuse the shared
+  endpoint (`http://localhost:9090` for the standard local Keycloak stack).
+- Provision each application's realm and clients on that service with the
+  supported reconciliation workflow. Configure the frontend and API with the
+  same realm issuer.
+- A separate disposable Keycloak instance MAY run only for an isolated automated
+  test that requires its own server state. The test MUST own its project, ports,
+  and data and clean up its resources on success or failure.
 
 ## Compatibility
 
